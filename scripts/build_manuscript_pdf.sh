@@ -32,7 +32,7 @@ set -euo pipefail
 
 PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 # MS_DIR defaults to manuscript/ but can be overridden to build a sibling
-# manuscript directory, e.g.  MS_DIR=manuscript3 bash scripts/build_manuscript_pdf.sh draft
+# manuscript directory, e.g.  MS_DIR=/path/to/other_manuscript bash scripts/build_manuscript_pdf.sh draft
 MS_DIR="${MS_DIR:-${PROJECT_ROOT}/manuscript}"
 # Allow a relative override (resolve against PROJECT_ROOT).
 case "${MS_DIR}" in

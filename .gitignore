@@ -22,6 +22,7 @@ manuscript/related_work/*.txt
 # Separate manuscripts in progress (own repos) — kept locally, not tracked here
 manuscript2/
 manuscript3/
+scripts/generate_paper2_figures.py
 
 # Runtime logs & scratch
 logs/
