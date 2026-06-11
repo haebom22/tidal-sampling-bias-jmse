@@ -1,0 +1,64 @@
+# Study sites: five major tidal-flat regions along the Korean coast.
+#
+# - center: representative central point inside the tidal flat (for tide modelling)
+# - bbox: approximate bounding box [min_lon, min_lat, max_lon, max_lat]
+#         covering the main intertidal zone (used for GEE scene filtering)
+# - khoa_stations: nearest Korea Hydrographic & Oceanographic Agency tide gauges
+#                  (used for FES2014 validation)
+# - tidal_range_m: approximate mean spring tidal range (literature value)
+
+sites:
+  - id: ganghwa
+    name_ko: 강화도
+    name_en: Ganghwa-do
+    region: Gyeonggi Bay (NW)
+    center: { lon: 126.450, lat: 37.600 }
+    bbox: [126.20, 37.45, 126.70, 37.80]
+    tidal_range_m: 8.0
+    khoa_stations:
+      - { code: "DT_0001", name_ko: "인천", name_en: "Incheon" }
+      - { code: "DT_0032", name_ko: "강화대교", name_en: "Ganghwadaegyo" }
+
+  - id: garorim
+    name_ko: 가로림만
+    name_en: Garorim Bay
+    region: West coast (Chungnam)
+    center: { lon: 126.400, lat: 37.000 }
+    bbox: [126.25, 36.85, 126.55, 37.15]
+    tidal_range_m: 6.0
+    khoa_stations:
+      - { code: "DT_0067", name_ko: "안흥", name_en: "Anheung" }
+      - { code: "DT_0017", name_ko: "대산", name_en: "Daesan" }
+
+  - id: gomso
+    name_ko: 곰소만
+    name_en: Gomso Bay
+    region: West coast (Jeonbuk)
+    center: { lon: 126.600, lat: 35.600 }
+    bbox: [126.45, 35.45, 126.75, 35.75]
+    tidal_range_m: 6.0
+    khoa_stations:
+      - { code: "DT_0018", name_ko: "군산", name_en: "Gunsan" }
+      - { code: "DT_0068", name_ko: "위도", name_en: "Wido" }
+
+  - id: hampyeong
+    name_ko: 함평만
+    name_en: Hampyeong Bay
+    region: Southwest coast (Jeonnam)
+    center: { lon: 126.400, lat: 35.100 }
+    bbox: [126.25, 34.95, 126.55, 35.25]
+    tidal_range_m: 4.0
+    khoa_stations:
+      - { code: "DT_0003", name_ko: "영광", name_en: "Yeonggwang" }
+      - { code: "DT_0007", name_ko: "목포", name_en: "Mokpo" }
+
+  - id: suncheon
+    name_ko: 순천만
+    name_en: Suncheon Bay
+    region: South coast (Jeonnam)
+    center: { lon: 127.500, lat: 34.900 }
+    bbox: [127.35, 34.75, 127.65, 35.05]
+    tidal_range_m: 3.0
+    khoa_stations:
+      - { code: "DT_0016", name_ko: "여수", name_en: "Yeosu" }
+      - { code: "DT_0026", name_ko: "고흥발포", name_en: "Goheung-Balpo" }

@@ -1,0 +1,118 @@
+# KHOA Open API endpoints (data.go.kr 발급 인증키 사용).
+#
+# 소스: data.go.kr 가이드 PDF (4종 모두 확정, 2026-05-21)
+#   - API_1시간조위.pdf
+#   - API_평균해면성과.pdf
+#   - API_편차계산.pdf
+#   - API_최극조위.pdf
+#
+# 모든 API는 동일한 일반 인증키(serviceKey, Decoding)를 사용합니다.
+
+base:
+  url: "https://apis.data.go.kr/1192136"
+
+# 실제 KHOA data.go.kr 응답 구조 (확인 완료, 2026-05-21):
+#   {"header":{"resultCode":"00","resultMsg":"NORMAL_SERVICE"},
+#    "body":{"items":{"item":[ {...}, ... ]}}}
+envelope:
+  candidates:
+    - ["body", "items", "item"]
+    - ["body", "items"]
+    - ["response", "body", "items", "item"]
+    - ["response", "body", "items"]
+    - ["result", "data"]
+    - ["data"]
+    - ["items"]
+  result_code_candidates:
+    - ["header", "resultCode"]
+    - ["response", "header", "resultCode"]
+  result_msg_candidates:
+    - ["header", "resultMsg"]
+    - ["response", "header", "resultMsg"]
+  ok_codes: ["00", "0"]
+  nodata_codes: ["03", "3"]
+
+# 공통 파라미터.
+common_params:
+  type: "json"
+  numOfRows: "300"
+  pageNo: "1"
+
+apis:
+  # ===== 1시간 조위(조석성과) — SV-AP-04-005 =====
+  tide_hourly:
+    path: "/hourlyTide/GetHourlyTideApiService"
+    operation: "getHourlyTideApi"
+    data_go_kr_id: "15156017"
+    description: "조위관측소 관측 후 품질관리(QC)된 시간별 조위 (cm)"
+    params:
+      key_name: "obsCode"
+      date_name: "reqDate"        # YYYYMMDD, 옵션 (없으면 최신일자)
+    date_format: "%Y%m%d"
+    response_keys:
+      record_time: ["obsrvnDt"]   # YYYY-MM-DD HH:MM
+      tide_cm:     ["tdlvVl"]
+      obs_name:    ["obsvtrNm"]
+      obs_lon:     ["lot"]
+      obs_lat:     ["lat"]
+
+  # ===== 편차계산표(조석성과) — SV-AP-04-002 =====
+  tide_deviation:
+    path: "/deviationCal/GetDeviationCalApiService"
+    operation: "getDeviationCalApi"
+    data_go_kr_id: "15156023"
+    description: "조위 관측 vs 예측 편차 (고·저조 시각/높이)"
+    params:
+      key_name: "obsCode"
+      date_name: "reqDate"        # YYYYMM, 옵션 (없으면 최신연월)
+    date_format: "%Y%m"
+    response_keys:
+      record_time:    ["obsrvnDt"]
+      obs_tide_cm:    ["obsTdlvVl"]
+      pred_time:      ["predcDt"]
+      pred_tide_cm:   ["predcTdlvVl"]
+      extreme_kind:   ["extrKnd"]      # 1:오전고조 2:오전저조 3:오후고조 4:오후저조
+      miss_segment:   ["missSegSe"]    # 결측구간 (1: 정상, 2: 1~5h, 3: 5h+)
+      time_offset:    ["tmOfs"]
+      tide_offset_cm: ["tdlvOfs"]
+
+  # ===== 최극조위(조석성과) — SV-AP-04-003 =====
+  tide_extreme:
+    path: "/extrmTideLvl/GetExtrmTideLvlApiService"
+    operation: "getExtrmTideLvlApi"
+    data_go_kr_id: "15156022"
+    description: "월별/연별 최고조·최저조 (시각·높이)"
+    params:
+      key_name: "obsCode"
+      date_name: null              # reqDate 없음
+    date_format: null
+    response_keys:
+      record_time:    ["obsrvnYm"]   # YYYYMM
+      obs_name:       ["obsvtrNm"]
+      obs_lon:        ["lot"]
+      obs_lat:        ["lat"]
+      monthly_high_cm: ["hiwlv"]
+      monthly_high_dt: ["hwDt"]
+      monthly_low_cm: ["lowlv"]
+      monthly_low_dt: ["lwDt"]
+      yearly_high_cm: ["yrMaxHiwlv"]
+      yearly_high_dt: ["yrMaxHiwlvDt"]
+      yearly_low_cm:  ["yrMinLowlv"]
+      yearly_low_dt:  ["yrMinLowlvDt"]
+
+  # ===== 평균해면성과표(조석성과) — SV-AP-04-004 =====
+  msl:
+    path: "/meanSeaLvl/GetMeanSeaLvlApiService"
+    operation: "getMeanSeaLvlApi"
+    data_go_kr_id: "15156021"
+    description: "월별 평균해면 (cm)"
+    params:
+      key_name: "obsCode"
+      date_name: null              # reqDate 없음
+    date_format: null
+    response_keys:
+      record_time: ["obsrvnYm"]    # YYYYMM
+      msl_cm:      ["obsAvgTdlv"]
+      obs_name:    ["obsvtrNm"]
+      obs_lon:     ["lot"]
+      obs_lat:     ["lat"]

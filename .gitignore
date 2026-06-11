@@ -1,0 +1,33 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.DS_Store
+
+# Data — large and reproducible from scripts + public APIs (KHOA, GEE, FES2022b, GLO30).
+# Includes 24 GB FES2022b grids, raw KHOA/GEE pulls, and large DEM/extent outputs.
+# The small derived tables under data/outputs/tables/ are regenerable too; release
+# the curated subset via Zenodo (see manuscript "Data and code availability").
+data/
+
+# Reference papers (external / copyrighted)
+reference/
+# Full-text PDF/extract of external papers (copyrighted); notes/metadata stay tracked
+manuscript/related_work/*.pdf
+manuscript/related_work/*.txt
+
+# Runtime logs & scratch
+logs/
+.cache/
+
+# Credentials
+.aviso_credentials
+.khoa_api_key
+*.token
+
+# IDE
+.vscode/
+.idea/

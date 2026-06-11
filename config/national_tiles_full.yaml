@@ -1,0 +1,623 @@
+# Full-coverage national tile grid (regular 0.3-deg).
+# Generated from MOF 2023 getbol (border-area-included edition):
+# tiles with >= 1 km2 of official tidal flat. Captures ~2436 of
+# the national 2443 km2. IDs: K_<lon*10>_<lat*10> (lower-left).
+
+tile_size_deg: 0.3
+tiles:
+- id: K_1245_0378
+  bbox:
+  - 124.5
+  - 37.8
+  - 124.8
+  - 38.1
+  center:
+    lon: 124.65
+    lat: 37.95
+  n_intertidal_pixels: 4524
+  region_hint: 인천광역시 (MOF 4.1 km2)
+- id: K_1257_0375
+  bbox:
+  - 125.7
+  - 37.5
+  - 126.0
+  - 37.8
+  center:
+    lon: 125.85
+    lat: 37.65
+  n_intertidal_pixels: 36137
+  region_hint: 인천광역시 (MOF 32.5 km2)
+- id: K_1257_0369
+  bbox:
+  - 125.7
+  - 36.9
+  - 126.0
+  - 37.2
+  center:
+    lon: 125.85
+    lat: 37.05
+  n_intertidal_pixels: 1744
+  region_hint: 인천광역시 (MOF 1.6 km2)
+- id: K_1257_0348
+  bbox:
+  - 125.7
+  - 34.8
+  - 126.0
+  - 35.1
+  center:
+    lon: 125.85
+    lat: 34.95
+  n_intertidal_pixels: 1239
+  region_hint: 전라남도 (MOF 1.1 km2)
+- id: K_1257_0345
+  bbox:
+  - 125.7
+  - 34.5
+  - 126.0
+  - 34.8
+  center:
+    lon: 125.85
+    lat: 34.65
+  n_intertidal_pixels: 27628
+  region_hint: 전라남도 (MOF 24.9 km2)
+- id: K_1260_0378
+  bbox:
+  - 126.0
+  - 37.8
+  - 126.3
+  - 38.1
+  center:
+    lon: 126.15
+    lat: 37.95
+  n_intertidal_pixels: 16036
+  region_hint: 인천광역시 (MOF 14.4 km2)
+- id: K_1260_0375
+  bbox:
+  - 126.0
+  - 37.5
+  - 126.3
+  - 37.8
+  center:
+    lon: 126.15
+    lat: 37.65
+  n_intertidal_pixels: 219277
+  region_hint: 인천광역시 (MOF 197.4 km2)
+- id: K_1260_0372
+  bbox:
+  - 126.0
+  - 37.2
+  - 126.3
+  - 37.5
+  center:
+    lon: 126.15
+    lat: 37.35
+  n_intertidal_pixels: 40606
+  region_hint: 인천광역시 (MOF 36.5 km2)
+- id: K_1260_0369
+  bbox:
+  - 126.0
+  - 36.9
+  - 126.3
+  - 37.2
+  center:
+    lon: 126.15
+    lat: 37.05
+  n_intertidal_pixels: 13944
+  region_hint: 인천광역시 (MOF 12.6 km2)
+- id: K_1260_0366
+  bbox:
+  - 126.0
+  - 36.6
+  - 126.3
+  - 36.9
+  center:
+    lon: 126.15
+    lat: 36.75
+  n_intertidal_pixels: 61113
+  region_hint: 충청남도 (MOF 55.0 km2)
+- id: K_1260_0363
+  bbox:
+  - 126.0
+  - 36.3
+  - 126.3
+  - 36.6
+  center:
+    lon: 126.15
+    lat: 36.45
+  n_intertidal_pixels: 1909
+  region_hint: 충청남도 (MOF 1.7 km2)
+- id: K_1260_0354
+  bbox:
+  - 126.0
+  - 35.4
+  - 126.3
+  - 35.7
+  center:
+    lon: 126.15
+    lat: 35.55
+  n_intertidal_pixels: 4721
+  region_hint: 전라북도 (MOF 4.2 km2)
+- id: K_1260_0351
+  bbox:
+  - 126.0
+  - 35.1
+  - 126.3
+  - 35.4
+  center:
+    lon: 126.15
+    lat: 35.25
+  n_intertidal_pixels: 129773
+  region_hint: 전라남도 (MOF 116.8 km2)
+- id: K_1260_0348
+  bbox:
+  - 126.0
+  - 34.8
+  - 126.3
+  - 35.1
+  center:
+    lon: 126.15
+    lat: 34.95
+  n_intertidal_pixels: 204609
+  region_hint: 전라남도 (MOF 184.2 km2)
+- id: K_1260_0345
+  bbox:
+  - 126.0
+  - 34.5
+  - 126.3
+  - 34.8
+  center:
+    lon: 126.15
+    lat: 34.65
+  n_intertidal_pixels: 111795
+  region_hint: 전라남도 (MOF 100.6 km2)
+- id: K_1260_0342
+  bbox:
+  - 126.0
+  - 34.2
+  - 126.3
+  - 34.5
+  center:
+    lon: 126.15
+    lat: 34.35
+  n_intertidal_pixels: 12235
+  region_hint: 전라남도 (MOF 11.0 km2)
+- id: K_1263_0378
+  bbox:
+  - 126.3
+  - 37.8
+  - 126.6
+  - 38.1
+  center:
+    lon: 126.45
+    lat: 37.95
+  n_intertidal_pixels: 40149
+  region_hint: 인천광역시 (MOF 36.1 km2)
+- id: K_1263_0375
+  bbox:
+  - 126.3
+  - 37.5
+  - 126.6
+  - 37.8
+  center:
+    lon: 126.45
+    lat: 37.65
+  n_intertidal_pixels: 238210
+  region_hint: 인천광역시 (MOF 214.4 km2)
+- id: K_1263_0372
+  bbox:
+  - 126.3
+  - 37.2
+  - 126.6
+  - 37.5
+  center:
+    lon: 126.45
+    lat: 37.35
+  n_intertidal_pixels: 172230
+  region_hint: 인천광역시 (MOF 155.0 km2)
+- id: K_1263_0369
+  bbox:
+  - 126.3
+  - 36.9
+  - 126.6
+  - 37.2
+  center:
+    lon: 126.45
+    lat: 37.05
+  n_intertidal_pixels: 76489
+  region_hint: 충청남도 (MOF 68.8 km2)
+- id: K_1263_0366
+  bbox:
+  - 126.3
+  - 36.6
+  - 126.6
+  - 36.9
+  center:
+    lon: 126.45
+    lat: 36.75
+  n_intertidal_pixels: 48252
+  region_hint: 충청남도 (MOF 43.4 km2)
+- id: K_1263_0363
+  bbox:
+  - 126.3
+  - 36.3
+  - 126.6
+  - 36.6
+  center:
+    lon: 126.45
+    lat: 36.45
+  n_intertidal_pixels: 92745
+  region_hint: 충청남도 (MOF 83.5 km2)
+- id: K_1263_0360
+  bbox:
+  - 126.3
+  - 36.0
+  - 126.6
+  - 36.3
+  center:
+    lon: 126.45
+    lat: 36.15
+  n_intertidal_pixels: 30895
+  region_hint: 충청남도 (MOF 27.8 km2)
+- id: K_1263_0357
+  bbox:
+  - 126.3
+  - 35.7
+  - 126.6
+  - 36.0
+  center:
+    lon: 126.45
+    lat: 35.85
+  n_intertidal_pixels: 13528
+  region_hint: 전라북도 (MOF 12.2 km2)
+- id: K_1263_0354
+  bbox:
+  - 126.3
+  - 35.4
+  - 126.6
+  - 35.7
+  center:
+    lon: 126.45
+    lat: 35.55
+  n_intertidal_pixels: 71425
+  region_hint: 전라북도 (MOF 64.3 km2)
+- id: K_1263_0351
+  bbox:
+  - 126.3
+  - 35.1
+  - 126.6
+  - 35.4
+  center:
+    lon: 126.45
+    lat: 35.25
+  n_intertidal_pixels: 122658
+  region_hint: 전라남도 (MOF 110.4 km2)
+- id: K_1263_0348
+  bbox:
+  - 126.3
+  - 34.8
+  - 126.6
+  - 35.1
+  center:
+    lon: 126.45
+    lat: 34.95
+  n_intertidal_pixels: 164229
+  region_hint: 전라남도 (MOF 147.8 km2)
+- id: K_1263_0345
+  bbox:
+  - 126.3
+  - 34.5
+  - 126.6
+  - 34.8
+  center:
+    lon: 126.45
+    lat: 34.65
+  n_intertidal_pixels: 29845
+  region_hint: 전라남도 (MOF 26.9 km2)
+- id: K_1263_0342
+  bbox:
+  - 126.3
+  - 34.2
+  - 126.6
+  - 34.5
+  center:
+    lon: 126.45
+    lat: 34.35
+  n_intertidal_pixels: 31358
+  region_hint: 전라남도 (MOF 28.2 km2)
+- id: K_1263_0339
+  bbox:
+  - 126.3
+  - 33.9
+  - 126.6
+  - 34.2
+  center:
+    lon: 126.45
+    lat: 34.05
+  n_intertidal_pixels: 5623
+  region_hint: 전라남도 (MOF 5.1 km2)
+- id: K_1266_0372
+  bbox:
+  - 126.6
+  - 37.2
+  - 126.9
+  - 37.5
+  center:
+    lon: 126.75
+    lat: 37.35
+  n_intertidal_pixels: 32934
+  region_hint: 인천광역시 (MOF 29.6 km2)
+- id: K_1266_0369
+  bbox:
+  - 126.6
+  - 36.9
+  - 126.9
+  - 37.2
+  center:
+    lon: 126.75
+    lat: 37.05
+  n_intertidal_pixels: 107527
+  region_hint: 경기도 (MOF 96.8 km2)
+- id: K_1266_0366
+  bbox:
+  - 126.6
+  - 36.6
+  - 126.9
+  - 36.9
+  center:
+    lon: 126.75
+    lat: 36.75
+  n_intertidal_pixels: 10891
+  region_hint: 충청남도 (MOF 9.8 km2)
+- id: K_1266_0360
+  bbox:
+  - 126.6
+  - 36.0
+  - 126.9
+  - 36.3
+  center:
+    lon: 126.75
+    lat: 36.15
+  n_intertidal_pixels: 49181
+  region_hint: 충청남도 (MOF 44.3 km2)
+- id: K_1266_0357
+  bbox:
+  - 126.6
+  - 35.7
+  - 126.9
+  - 36.0
+  center:
+    lon: 126.75
+    lat: 35.85
+  n_intertidal_pixels: 15521
+  region_hint: 전라북도 (MOF 14.0 km2)
+- id: K_1266_0354
+  bbox:
+  - 126.6
+  - 35.4
+  - 126.9
+  - 35.7
+  center:
+    lon: 126.75
+    lat: 35.55
+  n_intertidal_pixels: 17429
+  region_hint: 전라북도 (MOF 15.7 km2)
+- id: K_1266_0345
+  bbox:
+  - 126.6
+  - 34.5
+  - 126.9
+  - 34.8
+  center:
+    lon: 126.75
+    lat: 34.65
+  n_intertidal_pixels: 19053
+  region_hint: 전라남도 (MOF 17.2 km2)
+- id: K_1266_0342
+  bbox:
+  - 126.6
+  - 34.2
+  - 126.9
+  - 34.5
+  center:
+    lon: 126.75
+    lat: 34.35
+  n_intertidal_pixels: 72474
+  region_hint: 전라남도 (MOF 65.2 km2)
+- id: K_1266_0339
+  bbox:
+  - 126.6
+  - 33.9
+  - 126.9
+  - 34.2
+  center:
+    lon: 126.75
+    lat: 34.05
+  n_intertidal_pixels: 5702
+  region_hint: 전라남도 (MOF 5.1 km2)
+- id: K_1269_0369
+  bbox:
+  - 126.9
+  - 36.9
+  - 127.2
+  - 37.2
+  center:
+    lon: 127.05
+    lat: 37.05
+  n_intertidal_pixels: 1275
+  region_hint: 경기도 (MOF 1.1 km2)
+- id: K_1269_0366
+  bbox:
+  - 126.9
+  - 36.6
+  - 127.2
+  - 36.9
+  center:
+    lon: 127.05
+    lat: 36.75
+  n_intertidal_pixels: 1293
+  region_hint: 경기도 (MOF 1.2 km2)
+- id: K_1269_0345
+  bbox:
+  - 126.9
+  - 34.5
+  - 127.2
+  - 34.8
+  center:
+    lon: 127.05
+    lat: 34.65
+  n_intertidal_pixels: 28066
+  region_hint: 전라남도 (MOF 25.3 km2)
+- id: K_1269_0342
+  bbox:
+  - 126.9
+  - 34.2
+  - 127.2
+  - 34.5
+  center:
+    lon: 127.05
+    lat: 34.35
+  n_intertidal_pixels: 26662
+  region_hint: 전라남도 (MOF 24.0 km2)
+- id: K_1269_0333
+  bbox:
+  - 126.9
+  - 33.3
+  - 127.2
+  - 33.6
+  center:
+    lon: 127.05
+    lat: 33.45
+  n_intertidal_pixels: 2113
+  region_hint: 제주도 (MOF 1.9 km2)
+- id: K_1272_0348
+  bbox:
+  - 127.2
+  - 34.8
+  - 127.5
+  - 35.1
+  center:
+    lon: 127.35
+    lat: 34.95
+  n_intertidal_pixels: 34654
+  region_hint: 전라남도 (MOF 31.2 km2)
+- id: K_1272_0345
+  bbox:
+  - 127.2
+  - 34.5
+  - 127.5
+  - 34.8
+  center:
+    lon: 127.35
+    lat: 34.65
+  n_intertidal_pixels: 94634
+  region_hint: 전라남도 (MOF 85.2 km2)
+- id: K_1272_0342
+  bbox:
+  - 127.2
+  - 34.2
+  - 127.5
+  - 34.5
+  center:
+    lon: 127.35
+    lat: 34.35
+  n_intertidal_pixels: 6081
+  region_hint: 전라남도 (MOF 5.5 km2)
+- id: K_1275_0348
+  bbox:
+  - 127.5
+  - 34.8
+  - 127.8
+  - 35.1
+  center:
+    lon: 127.65
+    lat: 34.95
+  n_intertidal_pixels: 39554
+  region_hint: 전라남도 (MOF 35.6 km2)
+- id: K_1275_0345
+  bbox:
+  - 127.5
+  - 34.5
+  - 127.8
+  - 34.8
+  center:
+    lon: 127.65
+    lat: 34.65
+  n_intertidal_pixels: 22013
+  region_hint: 전라남도 (MOF 19.8 km2)
+- id: K_1278_0348
+  bbox:
+  - 127.8
+  - 34.8
+  - 128.1
+  - 35.1
+  center:
+    lon: 127.95
+    lat: 34.95
+  n_intertidal_pixels: 48029
+  region_hint: 경상남도 (MOF 43.2 km2)
+- id: K_1278_0345
+  bbox:
+  - 127.8
+  - 34.5
+  - 128.1
+  - 34.8
+  center:
+    lon: 127.95
+    lat: 34.65
+  n_intertidal_pixels: 2021
+  region_hint: 경상남도 (MOF 1.8 km2)
+- id: K_1281_0348
+  bbox:
+  - 128.1
+  - 34.8
+  - 128.4
+  - 35.1
+  center:
+    lon: 128.25
+    lat: 34.95
+  n_intertidal_pixels: 7780
+  region_hint: 경상남도 (MOF 7.0 km2)
+- id: K_1284_0351
+  bbox:
+  - 128.4
+  - 35.1
+  - 128.7
+  - 35.4
+  center:
+    lon: 128.55
+    lat: 35.25
+  n_intertidal_pixels: 2421
+  region_hint: 경상남도 (MOF 2.2 km2)
+- id: K_1284_0348
+  bbox:
+  - 128.4
+  - 34.8
+  - 128.7
+  - 35.1
+  center:
+    lon: 128.55
+    lat: 34.95
+  n_intertidal_pixels: 10587
+  region_hint: 경상남도 (MOF 9.5 km2)
+- id: K_1284_0345
+  bbox:
+  - 128.4
+  - 34.5
+  - 128.7
+  - 34.8
+  center:
+    lon: 128.55
+    lat: 34.65
+  n_intertidal_pixels: 2571
+  region_hint: 경상남도 (MOF 2.3 km2)
+- id: K_1287_0348
+  bbox:
+  - 128.7
+  - 34.8
+  - 129.0
+  - 35.1
+  center:
+    lon: 128.85
+    lat: 34.95
+  n_intertidal_pixels: 21199
+  region_hint: 부산광역시 (MOF 19.1 km2)

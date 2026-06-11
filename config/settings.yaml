@@ -1,0 +1,57 @@
+# Analysis settings.
+
+time_period:
+  start: "1984-01-01"
+  end: "2025-12-31"
+
+sensors:
+  landsat:
+    - { id: "L5", collection: "LANDSAT/LT05/C02/T1_L2", active: ["1984-03-01", "2012-05-05"] }
+    - { id: "L7", collection: "LANDSAT/LE07/C02/T1_L2", active: ["1999-05-28", "2022-04-06"] }
+    - { id: "L8", collection: "LANDSAT/LC08/C02/T1_L2", active: ["2013-04-11", null] }
+    - { id: "L9", collection: "LANDSAT/LC09/C02/T1_L2", active: ["2021-10-31", null] }
+  sentinel2:
+    - { id: "S2_HARMONIZED", collection: "COPERNICUS/S2_HARMONIZED", active: ["2015-06-23", null] }
+  sentinel1:
+    - { id: "S1_GRD", collection: "COPERNICUS/S1_GRD", active: ["2014-10-03", null] }
+
+# Maximum scene cloud cover for the "usable" subset (full set is unfiltered).
+cloud_cover_threshold: 60
+
+# Tide-aliasing analysis parameters.
+aliasing:
+  # Reference tide range derived from a dense synthetic time series for each site.
+  # Sampled every (minutes) over (years) prior to study start to define
+  # the full astronomical tidal envelope.
+  reference_synthetic:
+    sampling_minutes: 30
+    years: 19            # one full nodal cycle (18.61 years)
+  # Histogram bins for tide-level distributions.
+  histogram_bins: 40
+  # Sub-period breakdown for temporal comparison.
+  subperiods:
+    - { id: "1984-1999", start: "1984-01-01", end: "1999-12-31" }
+    - { id: "2000-2014", start: "2000-01-01", end: "2014-12-31" }
+    - { id: "2015-2025", start: "2015-01-01", end: "2025-12-31" }
+
+# Typical tidal-flat slopes [m/m].  Estimates from coastal-geomorphology
+# literature; used only for the DEM-error → horizontal-displacement conversion
+# in B-5.  Refine with site-specific bathymetry/LiDAR if available.
+dem_error:
+  default_slope: 0.001
+  site_slopes:
+    ganghwa:    0.0008   # Large mudflat, very shallow (~10 km wide for 8 m range)
+    garorim:    0.0015   # Bay-mouth tidal flat, moderate
+    gomso:      0.0012   # Cuspate flat
+    hampyeong:  0.0015   # Bay-mouth flat
+    suncheon:   0.0020   # Reed-dominated, slightly steeper
+
+paths:
+  raw: data/raw
+  processed: data/processed
+  outputs: data/outputs
+  gee_metadata: data/raw/gee_metadata
+  fes2014: data/raw/fes2014
+  khoa: data/raw/khoa
+  figures: data/outputs/figures
+  tables: data/outputs/tables
