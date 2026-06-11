@@ -83,7 +83,7 @@ abstract: |
 
 ### 1.1 동기
 
-전 세계 조간대는 약 128,000 km$^{2}$로 추정되며(Murray et al., 2019), 탄소 격리, 어류·갑각류 서식지 제공, 해안 폭풍 완충 등 핵심 생태계 서비스를 담당한다. 그러나 이들 지역에 대한 디지털 표고 모델(DEM)은 현장 측량 비용과 접근성 제약으로 인해 대규모 일관 매핑이 어렵다. 항공 LiDAR가 가장 정확한 자료를 제공하지만 비용이 크고, 임무 단위로 단발적으로 운영된다. 위성 탑재 ICESat-2 레이저 고도계는 최근 조간대에서 반복 가능한 cm급 직접 표고 기준을 제공하지만, 성기고 불연속적인 지상 트랙으로 인해 단독 DEM 밀도는 제한적이다(Xu et al., 2022).
+전 세계 조간대는 약 128,000 km$^{2}$로 추정되며(Murray et al., 2019; Worm et al., 2006), 탄소 격리, 어류·갑각류 서식지 제공, 해안 폭풍 완충 등 핵심 생태계 서비스를 담당한다. 그러나 이들 지역에 대한 디지털 표고 모델(DEM)은 현장 측량 비용과 접근성 제약으로 인해 대규모 일관 매핑이 어렵다. 항공 LiDAR가 가장 정확한 자료를 제공하지만 비용이 크고, 임무 단위로 단발적으로 운영된다. 위성 탑재 ICESat-2 레이저 고도계는 최근 조간대에서 반복 가능한 cm급 직접 표고 기준을 제공하지만, 성기고 불연속적인 지상 트랙으로 인해 단독 DEM 밀도는 제한적이다(Xu et al., 2022).
 
 가장 널리 사용되는 위성 기반 대안은 **워터라인 기법**(Mason et al., 1995; Heygster et al., 2010; Murray et al., 2012)이다. 단순한 형태로는, 위성 통과 시각 $t$에 취득된 무운(無雲) 영상마다 정의되는 해륙 경계선이 곧 등표고 등고선 $z = \eta(t)$이며, 여기서 $\eta$는 인접 조위관측소 기준 datum 조위이다. 서로 다른 조위 단계의 위성 영상에서 추출된 다수의 워터라인을 중첩하면 조간대 hypsometric 곡선을 이산화할 수 있고 이를 보간해 DEM을 만든다. 이 접근은 Digital Earth Australia Intertidal 산물(Sagar et al., 2017; Bishop-Taylor et al., 2019a)의 기반이며 전 세계적으로 빠르게 확산되고 있다(Liu et al., 2015; Tseng et al., 2017; Khan et al., 2019; Salameh et al., 2019; Wang et al., 2020). 이를 보완하는 흐름으로, ICESat-2 레이저 고도계를 광학·SAR 워터라인과 결합해 수직 기준을 직접 구속하는 연구가 있다(Zhang et al., 2022; Xin et al., 2025).
 
@@ -533,7 +533,8 @@ KHOA 조위 자료는 한국 공공누리 라이선스에 따라 제공된다. E
 - Sent, G., Antunes, C., Spyrakos, E., Jackson, T., Atwood, E. C., Brito, A. C., 2025. *What time is the tide? The importance of tides for ocean colour applications to estuaries.* Remote Sensing Applications: Society and Environment 37, 101425. doi:10.1016/j.rsase.2024.101425.
 - Tseng, K.-H., Kuo, C.-Y., Lin, T.-H., Huang, Z.-C., Lin, Y.-C., Liao, W.-H., Chen, C.-F., 2017. *Reconstruction of time-varying tidal flat topography using optical remote sensing imageries.* ISPRS Journal of Photogrammetry and Remote Sensing 131, 92–103. doi:10.1016/j.isprsjprs.2017.07.008.
 - Wang, X., Liu, Y., Ling, F., Liu, Y., Fang, F., 2020. *Spatio-temporal change detection of Ningbo coastline using Landsat time-series images during 1976–2015.* ISPRS International Journal of Geo-Information 9, 68. doi:10.3390/ijgi9020068.
+- Worm, B., Barbier, E. B., Beaumont, N., Duffy, J. E., Folke, C., Halpern, B. S., Jackson, J. B. C., Lotze, H. K., Micheli, F., Palumbi, S. R., Sala, E., Selkoe, K. A., Stachowicz, J. J., Watson, R., 2006. *Impacts of biodiversity loss on ocean ecosystem services.* Science 314, 787–790. doi:10.1126/science.1132294.
 - Xin, H., Xu, N., Xu, H., Yang, H., Wang, Z., Zhang, Z., Ding, Y., Luan, H., Ou, Y., Yang, Y., 2025. *Mapping tidal flat topography by combining ICESat-2 laser altimetry and multi-source satellite imagery.* International Journal of Digital Earth 18 (2), 2554313. doi:10.1080/17538947.2025.2554313.
 - Xu, N., Ma, Y., Yang, J., Wang, X. H., Wang, Y., Xu, R., 2022. *Deriving tidal flat topography using ICESat-2 laser altimetry and Sentinel-2 imagery.* Geophysical Research Letters 49, e2021GL096813. doi:10.1029/2021GL096813.
-- Yun, H.-W., Kim, J.-R., Choi, Y.-S., Lin, S.-Y., 2022. *Analyses of time series InSAR signatures for the Ganghwa tidal flat, Korea.* Remote Sensing 14, 4448. doi:10.3390/rs14184448.
+- Yun, G. R., Ryu, J.-H., Kim, K. L., Lee, J. H., Lee, S.-K., 2022. *TanDEM-X-based Ganghwa tidal flat high-resolution topographic map construction and service.* GEO DATA 4 (1), 37–42. doi:10.22761/DJ2022.4.1.004.
 - Zhang, S., Xu, Q., Wang, H., Kang, Y., Li, X., 2022. *Automatic waterline extraction and topographic mapping of tidal flats from SAR images based on deep learning.* Geophysical Research Letters 49, e2021GL096007. doi:10.1029/2021GL096007.
