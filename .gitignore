@@ -19,6 +19,10 @@ reference/
 manuscript/related_work/*.pdf
 manuscript/related_work/*.txt
 
+# Separate manuscripts in progress (own repos) — kept locally, not tracked here
+manuscript2/
+manuscript3/
+
 # Runtime logs & scratch
 logs/
 .cache/
