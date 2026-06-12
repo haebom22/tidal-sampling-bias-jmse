@@ -22,6 +22,7 @@ MS = ROOT / "manuscript"
 
 STEMS = {
     "draft": "draft",
+    "mdpi": "draft_mdpi",
     "ko": "draft_ko",
     "supp": "supplementary",
     "cover": "cover_letter",
@@ -167,6 +168,13 @@ def main() -> None:
         "--from=markdown-implicit_figures+raw_tex+tex_math_dollars+pipe_tables+yaml_metadata_block",
         "--to=docx", "-o", out.name,
     ]
+    # MDPI-style drafts use pandoc [@key] citations; resolve them to the
+    # numeric MDPI style so the .docx carries inline [n] and a numbered
+    # reference list (the RSE draft has hand-typed citations and is untouched).
+    if "[@" in md and (MS / "references.bib").exists():
+        cmd += ["--citeproc", "--bibliography=references.bib"]
+        if (MS / "mdpi.csl").exists():
+            cmd += ["--csl=mdpi.csl"]
     subprocess.run(cmd, cwd=MS, check=True)
     tmp.unlink()
     print(f"  -> {out.relative_to(ROOT)}  ({out.stat().st_size // 1024} KB)")

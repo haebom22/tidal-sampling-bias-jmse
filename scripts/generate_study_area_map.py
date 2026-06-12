@@ -114,6 +114,24 @@ def main() -> None:
     ax.legend(handles=legend_handles, loc="lower right", fontsize=9,
               frameon=True, facecolor="white", edgecolor="black")
 
+    # North arrow (MDPI requires a north arrow on maps)
+    ax.annotate("", xy=(0.945, 0.95), xytext=(0.945, 0.87),
+                xycoords="axes fraction",
+                arrowprops=dict(arrowstyle="-|>", color="black", linewidth=1.8))
+    ax.text(0.945, 0.965, "N", transform=ax.transAxes, ha="center", va="center",
+            fontsize=13, fontweight="bold")
+
+    # Scale bar (MDPI requires a scale on maps). 100 km, computed at its latitude.
+    sb_lat, sb_lon0, km = 34.0, 124.85, 100.0
+    sb_lon1 = sb_lon0 + km / (111.320 * np.cos(np.radians(sb_lat)))
+    ax.plot([sb_lon0, sb_lon1], [sb_lat, sb_lat], color="black", linewidth=2.6,
+            transform=proj, solid_capstyle="butt", zorder=6)
+    for x in (sb_lon0, sb_lon1):
+        ax.plot([x, x], [sb_lat - 0.07, sb_lat + 0.07], color="black",
+                linewidth=2.6, transform=proj, zorder=6)
+    ax.text(0.5 * (sb_lon0 + sb_lon1), sb_lat + 0.14, "100 km", ha="center",
+            va="bottom", fontsize=9, fontweight="bold", transform=proj, zorder=6)
+
     # Inset: regional context
     inset = fig.add_axes([0.08, 0.55, 0.18, 0.30],
                           projection=ccrs.PlateCarree())
@@ -128,7 +146,7 @@ def main() -> None:
     inset.set_title("E Asia", fontsize=8, pad=2)
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(OUT_PATH, dpi=220, bbox_inches="tight")
+    fig.savefig(OUT_PATH, dpi=600, bbox_inches="tight")  # MDPI: >=600 dpi
     print(f"Wrote {OUT_PATH}")
 
 
