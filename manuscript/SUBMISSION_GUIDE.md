@@ -27,7 +27,7 @@ via SuSy (`susy.mdpi.com`), with the exact values for this submission.
 - **Article Type**: **Article**
 
 ## 3. Manuscript metadata
-- **Title**: `Predicting tidal-sampling bias of sun-synchronous satellites from overpass phase: theory and validation on macrotidal coasts`
+- **Title**: `Predicting Tidal-Sampling Bias of Sun-Synchronous Satellites from Overpass Phase: Theory and Validation on Macrotidal Coasts`
 - **Abstract**: copy the ~200-word abstract from `draft_mdpi.md` (the YAML `abstract:` block)
 - **Keywords**: `tidal flat; intertidal DEM; waterline method; tidal aliasing; sun-synchronous orbit; amphidromic system`
 
