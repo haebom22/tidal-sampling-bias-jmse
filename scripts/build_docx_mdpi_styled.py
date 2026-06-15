@@ -122,6 +122,26 @@ def main() -> None:
     doc = re.sub(r"(<w:body>)", r"\1" + ARTICLE_PARA, doc, count=1)
     blobs["word/document.xml"] = doc.encode("utf-8")
 
+    # Using the template as the reference doc replaces pandoc's styles.xml, which
+    # drops the few helper styles pandoc still references (e.g. the table style
+    # "Table", the inline-code char style "VerbatimChar"). Define any
+    # referenced-but-undefined style minimally so Word never sees a dangling
+    # reference (which would trigger a "repair" prompt).
+    styles_xml = blobs["word/styles.xml"].decode("utf-8")
+    defined = set(re.findall(r'w:styleId="([^"]+)"', styles_xml))
+    type_of: dict[str, str] = {}
+    for typ, attr in (("paragraph", "pStyle"), ("character", "rStyle"),
+                      ("table", "tblStyle"), ("numbering", "numStyle")):
+        for sid in re.findall(rf'w:{attr} w:val="([^"]+)"', doc):
+            type_of.setdefault(sid, typ)
+    add = "".join(
+        f'<w:style w:type="{t}" w:styleId="{sid}"><w:name w:val="{sid}"/></w:style>'
+        for sid, t in type_of.items() if sid not in defined
+    )
+    if add:
+        styles_xml = styles_xml.replace("</w:styles>", add + "</w:styles>")
+        blobs["word/styles.xml"] = styles_xml.encode("utf-8")
+
     tmp = OUT.with_suffix(".docx.tmp")
     with zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as zout:
         for n in names:
