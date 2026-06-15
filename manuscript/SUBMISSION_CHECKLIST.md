@@ -30,7 +30,7 @@ Companion to `SUBMISSION_GUIDE.md`. Legend: ✅ done/verified in the package ·
 
 ## D. Suggested reviewers (◻ enter e-mails — the only live data still missing)
 - ◻ Robbi Bishop-Taylor, Stephen Sagar (Geoscience Australia); Nicholas J. Murray (JCU);
-  Kuo-Hsin Tseng (NCU, Taiwan); Nan Xu (Hohai, China) — **5 e-mails**
+  Kuo-Hsin Tseng (NCU, Taiwan); Nan Xu (Shenzhen Univ., China) — **5 e-mails**
 - ◻ Opposed: none. Keep **Ryu group excluded**.
 
 ## E. Declaration checkboxes (must match the manuscript — ✅ in the text)

@@ -87,7 +87,7 @@ Built by `scripts/build_latex_mdpi.py` from `draft_mdpi.md` into
   - Stephen Sagar — Geoscience Australia
   - Nicholas J. Murray — James Cook University, Australia
   - Kuo-Hsin Tseng — National Central University, Taiwan
-  - Nan Xu — Hohai University, China
+  - Nan Xu — Shenzhen University, China
 - **Opposed**: none
 - (These mirror the list in `cover_letter_mdpi.pdf`. All international, no prior
   collaboration. Ryu J.-H. deliberately excluded — the paper differentiates from

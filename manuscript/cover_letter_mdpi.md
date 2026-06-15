@@ -71,6 +71,6 @@ Haebom Data Inc., Republic of Korea · tysong@haebomdata.com
 - **Stephen Sagar** — Geoscience Australia (continental-scale intertidal extent and topography)
 - **Nicholas J. Murray** — James Cook University, Australia (global tidal-flat distribution and change)
 - **Kuo-Hsin Tseng** — National Central University, Taiwan (optical reconstruction of time-varying tidal-flat topography)
-- **Nan Xu** — Hohai University, China (ICESat-2 + Sentinel-2 intertidal topography and vertical referencing)
+- **Nan Xu** — Shenzhen University, China (ICESat-2 + Sentinel-2 intertidal topography and vertical referencing)
 
 \noindent\textbf{Opposed reviewers:} none.
