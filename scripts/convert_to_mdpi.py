@@ -135,6 +135,8 @@ AFFILIATION_BLOCK = (
     "^1^ Haebom Data Inc., #904, Gasan A1 Tower, 205-27 Gasan 1-ro, "
     "Geumcheon-gu, Seoul 08503, Republic of Korea; "
     "tysong@haebomdata.com (T.S.); mirinae@haebomdata.com (M.K.)  \n"
+    "^2^ Department of Ocean Sciences, Inha University, "
+    "Incheon 22212, Republic of Korea  \n"
     "ORCID: T.S. 0000-0002-4111-8959; M.K. 0000-0002-2534-3777  \n"
     "\\* Correspondence: tysong@haebomdata.com (T.S.)\n\n"
 )
