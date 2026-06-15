@@ -157,7 +157,9 @@ authors have read and agreed to the published version of the manuscript.
 
 ## Funding
 
-This research received no external funding.
+This research was supported by the *2026 National Blue Carbon Monitoring*
+project commissioned by the Korea Marine Environment Management Corporation
+(KOEM) (contract number R26TA01845857-00).
 
 ## Institutional Review Board Statement
 
@@ -194,13 +196,12 @@ publication.
 
 ## Conflicts of Interest
 
-The authors are employees of Haebom Data Inc., a company providing coastal and
-marine geospatial data-analytics services, including the nationwide Blue Carbon
-Monitoring service commissioned by the Korea Marine Environment Management
-Corporation (KOEM). This study was conceived and conducted independently of that
-service contract; Haebom Data Inc. and KOEM had no role in the design of the
-study; in the collection, analysis, or interpretation of data; in the writing of
-the manuscript; or in the decision to publish the results. The authors declare no
+Both authors are employees of Haebom Data Inc., which carries out the 2026
+National Blue Carbon Monitoring service commissioned by the Korea Marine
+Environment Management Corporation (KOEM); the present study was undertaken
+within that programme. The funder had no role in the design of the study; in the
+collection, analyses, or interpretation of data; in the writing of the
+manuscript; or in the decision to publish the results. The authors declare no
 other conflict of interest.
 
 ## References
