@@ -6,6 +6,7 @@
 %% the accepted paper with pdfLaTeX at production; the source remains valid there.
 \documentclass[remotesensing,article,submit,moreauthors]{Definitions/mdpi}
 \usepackage{amssymb} % \lesssim, \gtrsim etc. (mdpi.cls loads amsmath only)
+\usepackage{adjustbox} % shrink over-wide tables to \textwidth
 
 \firstpage{1}
 \makeatletter
@@ -223,6 +224,7 @@ existing Korean tidal-flat DEM and sampling-bias literature.
 \caption{\textbf{Position of the present study within the Korean tidal-flat DEM and altimetry-sampling literature.} The present work is the first to address the optical-waterline sampling bias \textit{analytically and \textit{a priori}}; prior Korean works either map a single-site DEM or treat the bias empirically or in the altimetry (sea-level) domain.}
 \label{tab:positioning}
 \renewcommand{\arraystretch}{1.15}
+\begin{adjustbox}{max width=\textwidth}
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{2.0cm}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{2.4cm}>{\raggedright\arraybackslash}p{2.6cm}@{}}
 \toprule
 \textbf{Study} & \textbf{Region} & \textbf{Sensors} & \textbf{Method} & \textbf{Output} & \textbf{Treatment of sampling bias} \\
@@ -235,6 +237,7 @@ Lee, J. et al. (2025, ECSS) & Taean Peninsula (W) & L8/9 + S2A/B + S1A & Multi-s
 \textbf{This study} & \textbf{W + S coasts, 5 sites (2020--2024)} & \textbf{L8/9 + S2 (metadata; 5,082 scenes)} & \textbf{Phase-bias analysis; $\beta \cdot A \cdot \langle \cos\theta\rangle$} & \textbf{\textit{A priori} bias-correction model + DEM error budget} & \textbf{Analytically predicted, $R^2 = 0.98$ across sites/sensors} \\
 \bottomrule
 \end{tabular}
+\end{adjustbox}
 \end{table}
 
 \subsubsection{The Korean macrotidal
@@ -396,6 +399,7 @@ from 500 (Gomso) to 1,876 scenes (Garorim Bay; Table 2).
 \caption{\textbf{Data inventory per site for 2020--2024.} Planar slopes are the literature-based first-order values used for the horizontal-domain error budget (Section~3.5); see that section for sources.}
 \label{tab:inventory}
 \renewcommand{\arraystretch}{1.2}
+\begin{adjustbox}{max width=\textwidth}
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{2.9cm}>{\raggedright\arraybackslash}p{1.6cm}>{\raggedright\arraybackslash}p{3.2cm}>{\centering\arraybackslash}p{2.1cm}@{}}
 \toprule
 \textbf{Site} & \textbf{KHOA gauge} & \textbf{KHOA rows} & \textbf{Sat. scenes (L8 / L9 / S2)} & \textbf{Planar slope (m/km)} \\
@@ -407,6 +411,7 @@ Hampyeong Bay & Yeonggwang (DT\_0003) & 43,839 & 195 / 119 / 796 & 1.5 \\
 Suncheon Bay & Yeosu (DT\_0016) & 43,688 & 70 / 38 / 435 & 2.0 \\
 \bottomrule
 \end{tabular}
+\end{adjustbox}
 \end{table}
 
 Tide heights at each satellite acquisition time were obtained by linear
@@ -668,6 +673,7 @@ amphidromic geometry, not by the sensor or the tidal amplitude alone.}
 \caption{\textbf{Cross-site aliasing metrics, 5-year (2020--2024) summary.} Mean bias is the mean satellite-time tide height minus the 5-year KHOA mean. Suncheon Bay differs in sign and structure from the western sites.}
 \label{tab:aliasing}
 \renewcommand{\arraystretch}{1.15}
+\begin{adjustbox}{max width=\textwidth}
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.1cm}ccccc>{\centering\arraybackslash}p{2.0cm}@{}}
 \toprule
 \textbf{Site} & \textbf{Sensor} & \textbf{n} & \textbf{Spread} & \textbf{High off.} & \textbf{Low off.} & \textbf{Mean bias (m)} \\
@@ -689,6 +695,7 @@ Hampyeong & S2 & 796 & 0.73 & 0.23 & 0.03 & $-0.52$ \\
 \textbf{Suncheon} & S2 & 435 & 0.69 & 0.05 & \textbf{0.26} & $\mathbf{+0.31}$ \\
 \bottomrule
 \end{tabular}
+\end{adjustbox}
 \end{table}
 
 \subsubsection{The bipolar bias is set by the satellite-overpass tide
@@ -982,6 +989,7 @@ zero time-mean).
 \caption{\textbf{\textit{A priori} transferability of the bias model to macrotidal coasts outside Korea.} For each site the FES2022b amplitude $A$, satellite-overpass concentration $\langle\cos\theta\rangle$, model-predicted bias $\beta\cdot A\cdot\langle\cos\theta\rangle$ ($\beta = 1.78$, the Korean slope applied unchanged), and FES-sampled bias (mean FES tide at the real Landsat-8/9 + Sentinel-2 overpass times) are computed from global data alone, with no local tide gauge. $n$ = cloud-screened scenes (2020--2024, cloud $\leq$ 60\%).}
 \label{tab:overseas}
 \renewcommand{\arraystretch}{1.2}
+\begin{adjustbox}{max width=\textwidth}
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{5.0cm}ccccc@{}}
 \toprule
 \textbf{Site (tidal regime)} & \textbf{n} & \textbf{$A$ (m)} & \textbf{$\langle\cos\theta\rangle$} & \textbf{Pred.\ bias (m)} & \textbf{FES-sampled (m)} \\
@@ -991,6 +999,7 @@ Wadden Sea / German Bight (semidiurnal) & 573 & 1.41 & $+0.028$ & $+0.07$ & $+0.
 Bay of Fundy / Minas Basin (max.\ range) & 924 & 6.44 & $-0.016$ & $-0.18$ & $+0.24$ \\
 \bottomrule
 \end{tabular}
+\end{adjustbox}
 \end{table}
 
 The model transfers and, importantly, discriminates between high- and
