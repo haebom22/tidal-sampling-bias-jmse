@@ -41,3 +41,12 @@ logs/
 ~$*
 *.tmp
 .~lock.*#
+
+# LaTeX build artifacts for the MDPI latex submission (source + PDF are tracked)
+manuscript/latex_mdpi/*.aux
+manuscript/latex_mdpi/*.log
+manuscript/latex_mdpi/*.bbl
+manuscript/latex_mdpi/*.blg
+manuscript/latex_mdpi/*.out
+manuscript/latex_mdpi/*.xdv
+manuscript/*_latex_submission.zip

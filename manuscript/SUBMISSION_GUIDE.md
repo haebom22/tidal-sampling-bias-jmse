@@ -41,18 +41,38 @@ via SuSy (`susy.mdpi.com`), with the exact values for this submission.
 - Mark **Taeyoon Song** as Corresponding.
 
 ## 5. File upload (assign each to its slot)
+
+MDPI accepts **either** a Word **or** a LaTeX main manuscript — pick one route.
+
+### Route A — Word (.docx)
 | SuSy file type | File |
 |----------------|------|
-| **Manuscript** (main) | `draft_mdpi.docx` |
+| **Manuscript** (main) | `draft_mdpi.docx` (continuous line numbers embedded) |
 | **Cover Letter** | `cover_letter_mdpi.pdf` |
 | **Supplementary** | `supplementary.docx` |
 | (if figures requested separately) | high-res PNGs in `manuscript/figures/` |
 
-> ⚠️ MDPI prefers its own Word/LaTeX template. Our `.docx` has complete content
-> but is not the mdpi.cls two-column layout. Initial submission is usually
-> accepted as-is; if pre-check asks for the template, convert then (the
-> `scripts/build_mdpi.sh` + `mdpi.csl` pipeline and `draft_mdpi.md` source make
-> that straightforward).
+> Our `.docx` has complete content but is not the mdpi.cls two-column layout.
+> Initial submission is usually accepted as-is; if pre-check asks for the
+> template, switch to Route B.
+
+### Route B — LaTeX (official MDPI template, `Definitions/mdpi.cls`)
+Built by `scripts/build_latex_mdpi.py` from `draft_mdpi.md` into
+`manuscript/latex_mdpi/` and zipped as `remotesensing_latex_submission.zip`.
+| SuSy file type | File |
+|----------------|------|
+| **Manuscript** (main) | `latex_mdpi/remotesensing.pdf` + the LaTeX source |
+| LaTeX source (one ZIP) | `remotesensing_latex_submission.zip` (`.tex`, `Definitions/`, `references.bib`, `figures/`) |
+| **Cover Letter** | `cover_letter_mdpi.pdf` |
+| **Supplementary** | `supplementary.docx` |
+
+> `\documentclass[remotesensing,article,submit,moreauthors]{Definitions/mdpi}`;
+> numeric `\cite` via BibTeX/`mdpi.bst`; line numbers on (submit mode). The
+> template files are a vendored 2020 `mdpi.cls` (compiles cleanly; MDPI
+> re-typesets at production). For the very latest official class, re-download
+> from <https://www.mdpi.com/authors/latex> and drop it into `Definitions/`.
+> Local build uses tectonic (XeTeX): the `pdftex` class option is omitted and
+> EPS logos are auto-converted to PDF — both transparent to MDPI's pdfLaTeX.
 
 ## 6. Suggested / opposed reviewers
 - **Suggested** (name, affiliation, e-mail):
