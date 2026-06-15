@@ -15,6 +15,7 @@ from __future__ import annotations
 import re
 import subprocess
 import sys
+import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -151,6 +152,47 @@ def preprocess(md: str, fig_prefix: str = "",
     return combined.sub(repl, md)
 
 
+# Continuous line numbering for every line, restarting only at the document
+# start — the convention MDPI (and most journals) expect in the editable
+# manuscript so reviewers can cite "page X, line Y". SuSy rebuilds its review
+# PDF from this .docx, so the numbering must live in the file itself, not only
+# in our locally built PDF.
+_LNNUM = '<w:lnNumType w:countBy="1" w:restart="continuous"/>'
+
+
+def add_line_numbers(docx_path: Path) -> None:
+    """Inject continuous line numbering into every section of a .docx.
+
+    In OOXML, line numbering is a section property: a ``<w:lnNumType>`` child
+    of each ``<w:sectPr>``. The CT_SectPr schema fixes the child order, so the
+    element must be inserted *before* ``<w:cols>``/``<w:docGrid>`` (and after
+    the page-margin elements pandoc already emits) to remain valid.
+    """
+    with zipfile.ZipFile(docx_path) as zin:
+        names = zin.namelist()
+        blobs = {n: zin.read(n) for n in names}
+    doc = blobs["word/document.xml"].decode("utf-8")
+
+    def insert(m: re.Match) -> str:
+        sect = m.group(0)
+        if "w:lnNumType" in sect:  # already numbered — leave untouched
+            return sect
+        for anchor in ("<w:cols", "<w:docGrid"):
+            i = sect.find(anchor)
+            if i != -1:
+                return sect[:i] + _LNNUM + sect[i:]
+        return sect.replace("</w:sectPr>", _LNNUM + "</w:sectPr>")
+
+    doc = re.sub(r"<w:sectPr\b.*?</w:sectPr>", insert, doc, flags=re.DOTALL)
+    blobs["word/document.xml"] = doc.encode("utf-8")
+
+    tmp = docx_path.with_suffix(".docx.tmp")
+    with zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as zout:
+        for n in names:
+            zout.writestr(n, blobs[n])
+    tmp.replace(docx_path)
+
+
 def main() -> None:
     key = sys.argv[1] if len(sys.argv) > 1 else "draft"
     stem = STEMS.get(key, key)
@@ -177,6 +219,10 @@ def main() -> None:
             cmd += ["--csl=mdpi.csl"]
     subprocess.run(cmd, cwd=MS, check=True)
     tmp.unlink()
+    # Add continuous line numbers to manuscript bodies (reviewers cite by line);
+    # skip the cover letter, which is correspondence, not a reviewed manuscript.
+    if stem != "cover_letter":
+        add_line_numbers(out)
     print(f"  -> {out.relative_to(ROOT)}  ({out.stat().st_size // 1024} KB)")
 
 
