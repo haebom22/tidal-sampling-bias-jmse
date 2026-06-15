@@ -36,3 +36,8 @@ logs/
 # IDE
 .vscode/
 .idea/
+
+# Office temp / lock files (e.g. Word writes ~$draft_mdpi.docx while a doc is open)
+~$*
+*.tmp
+.~lock.*#
