@@ -542,7 +542,7 @@ authors have read and agreed to the published version of the manuscript.
 
 This research was supported by the *2026 National Blue Carbon Monitoring*
 project commissioned by the Korea Marine Environment Management Corporation
-(KOEM) (contract number R26TA01845857-00).
+(KOEM) (No. R26TA01845857-00).
 
 ## Institutional Review Board Statement
 
