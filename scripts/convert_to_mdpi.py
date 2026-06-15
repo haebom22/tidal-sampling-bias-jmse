@@ -154,13 +154,10 @@ M.K.; formal analysis, T.S.; investigation, T.S.; data curation, T.S. and M.K.;
 writing—original draft preparation, T.S.; writing—review and editing, T.S. and
 M.K.; visualization, T.S.; supervision, T.S.; project administration, T.S. All
 authors have read and agreed to the published version of the manuscript.
-<!-- T.S. = Taeyoon Song; M.K. = Mirinae Kim. Adjust the role split to reflect
-     each author's actual contribution before submission. -->
 
 ## Funding
 
 This research received no external funding.
-<!-- Or: "This research was funded by <FUNDER>, grant number <NUMBER>." -->
 
 ## Institutional Review Board Statement
 
@@ -186,9 +183,6 @@ derived products are < 50 MB total.
 The KHOA tide-gauge data are provided under the Korean Open Government License.
 Earth Engine access was provided by Google for academic use. We thank the
 developers of pyTMD, Cartopy, UTide, and eo-tides for open-source tooling.
-Haebom Data Inc. has carried out the nationwide Blue Carbon Monitoring service
-commissioned by the Korea Marine Environment Management Corporation (KOEM); the
-present study was conducted independently of that contract.
 
 ## Declaration of Generative AI and AI-Assisted Technologies in the Writing Process
 
@@ -200,7 +194,14 @@ publication.
 
 ## Conflicts of Interest
 
-The authors declare no conflicts of interest.
+The authors are employees of Haebom Data Inc., a company providing coastal and
+marine geospatial data-analytics services, including the nationwide Blue Carbon
+Monitoring service commissioned by the Korea Marine Environment Management
+Corporation (KOEM). This study was conceived and conducted independently of that
+service contract; Haebom Data Inc. and KOEM had no role in the design of the
+study; in the collection, analysis, or interpretation of data; in the writing of
+the manuscript; or in the decision to publish the results. The authors declare no
+other conflict of interest.
 
 ## References
 
