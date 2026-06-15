@@ -68,11 +68,12 @@ Built by `scripts/build_latex_mdpi.py` from `draft_mdpi.md` into
 
 > `\documentclass[remotesensing,article,submit,moreauthors]{Definitions/mdpi}`;
 > numeric `\cite` via BibTeX/`mdpi.bst`; line numbers on (submit mode). The
-> template files are a vendored 2020 `mdpi.cls` (compiles cleanly; MDPI
-> re-typesets at production). For the very latest official class, re-download
-> from <https://www.mdpi.com/authors/latex> and drop it into `Definitions/`.
-> Local build uses tectonic (XeTeX): the `pdftex` class option is omitted and
-> EPS logos are auto-converted to PDF — both transparent to MDPI's pdfLaTeX.
+> template files are the official **`mdpi.cls` dated 20/03/2024** (compiles
+> cleanly; MDPI re-typesets at production). To refresh to a still-newer class,
+> drop it into `Definitions/` from <https://www.mdpi.com/authors/latex> and
+> rerun `python scripts/build_latex_mdpi.py`. Local build uses tectonic
+> (XeTeX): the `pdftex` class option is omitted and EPS logos are
+> auto-converted to PDF — both transparent to MDPI's pdfLaTeX.
 
 ## 6. Suggested / opposed reviewers
 - **Suggested** (name, affiliation, e-mail):

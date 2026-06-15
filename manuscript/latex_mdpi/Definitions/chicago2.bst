@@ -1010,17 +1010,10 @@ FUNCTION {output.bibitem}
 }
 
 %% For printing DOI numbers (it is a hyperlink but printed in black)
-FUNCTION {format.doi}
-{ doi empty$
-  { ""  }
-  {"\href{https://doi.org/" doi * "}" * }
-  if$
-}
-
 FUNCTION {formatfull.doi}
 { doi empty$
   { ""  }
-  {"doi:{\changeurlcolor{black}\href{https://doi.org/" doi * "}{\detokenize{" * doi * "}}}" * }
+  {"{\url{https://doi.org/" doi * "}}" * }
   if$
 }
 
@@ -1663,7 +1656,7 @@ FUNCTION {begin.bib}
     'skip$
     { preamble$ write$ newline$ }
   if$
-  "\begin{thebibliography}{}" write$ newline$
+  "\begin{thebibliography}{999}" write$ newline$
 }
 
 
