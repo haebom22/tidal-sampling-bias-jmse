@@ -25,7 +25,7 @@ header-includes:
 
 \vspace*{0.2em}
 
-\hfill Taeyoon Song · Haebomdata Inc.
+\hfill Taeyoon Song · Haebom Data Inc.
 
 \hfill #904, Gasan A1 Tower, 205-27 Gasan 1-ro, Geumcheon-gu, Seoul 08503, Republic of Korea
 
@@ -61,7 +61,7 @@ Sincerely,
 
 Taeyoon Song (on behalf of both authors)
 
-Haebomdata Inc., Republic of Korea · tysong@haebomdata.com
+Haebom Data Inc., Republic of Korea · tysong@haebomdata.com
 
 \vspace{0.6em}
 

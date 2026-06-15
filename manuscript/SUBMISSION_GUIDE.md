@@ -34,10 +34,10 @@ via SuSy (`susy.mdpi.com`), with the exact values for this submission.
 ## 4. Authors (order and roles matter)
 | # | Name | Affiliation | E-mail | ORCID | Corresponding |
 |---|------|-------------|--------|-------|:---:|
-| 1 | Taeyoon Song | Haebomdata Inc. | tysong@haebomdata.com | 0000-0002-4111-8959 | ✅ |
-| 2 | Mirinae Kim | Haebomdata Inc. | mirinae@haebomdata.com | 0000-0002-2534-3777 | |
+| 1 | Taeyoon Song | Haebom Data Inc. | tysong@haebomdata.com | 0000-0002-4111-8959 | ✅ |
+| 2 | Mirinae Kim | Haebom Data Inc. | mirinae@haebomdata.com | 0000-0002-2534-3777 | |
 
-- **Affiliation 1**: `Haebomdata Inc., #904, Gasan A1 Tower, 205-27 Gasan 1-ro, Geumcheon-gu, Seoul 08503, Republic of Korea`
+- **Affiliation 1**: `Haebom Data Inc., #904, Gasan A1 Tower, 205-27 Gasan 1-ro, Geumcheon-gu, Seoul 08503, Republic of Korea`
 - Mark **Taeyoon Song** as Corresponding.
 
 ## 5. File upload (assign each to its slot)

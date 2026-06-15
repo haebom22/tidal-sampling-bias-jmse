@@ -132,7 +132,7 @@ KEYWORDS_LINE = (
 # article-class abstract comes from the YAML block above it.
 # TODO before submission: confirm M.K.'s e-mail and the full company address.
 AFFILIATION_BLOCK = (
-    "^1^ Haebomdata Inc., #904, Gasan A1 Tower, 205-27 Gasan 1-ro, "
+    "^1^ Haebom Data Inc., #904, Gasan A1 Tower, 205-27 Gasan 1-ro, "
     "Geumcheon-gu, Seoul 08503, Republic of Korea; "
     "tysong@haebomdata.com (T.S.); mirinae@haebomdata.com (M.K.)  \n"
     "ORCID: T.S. 0000-0002-4111-8959; M.K. 0000-0002-2534-3777  \n"
@@ -186,7 +186,7 @@ derived products are < 50 MB total.
 The KHOA tide-gauge data are provided under the Korean Open Government License.
 Earth Engine access was provided by Google for academic use. We thank the
 developers of pyTMD, Cartopy, UTide, and eo-tides for open-source tooling.
-Haebomdata Inc. has carried out the nationwide Blue Carbon Monitoring service
+Haebom Data Inc. has carried out the nationwide Blue Carbon Monitoring service
 commissioned by the Korea Marine Environment Management Corporation (KOEM); the
 present study was conducted independently of that contract.
 

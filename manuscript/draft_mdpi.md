@@ -64,7 +64,7 @@ markdown form for weasyprint compatibility (the global md2pdf.py uses
 the first H1 as cover title and renders blockquotes for the abstract).
 -->
 
-^1^ Haebomdata Inc., #904, Gasan A1 Tower, 205-27 Gasan 1-ro, Geumcheon-gu, Seoul 08503, Republic of Korea; tysong@haebomdata.com (T.S.); mirinae@haebomdata.com (M.K.)  
+^1^ Haebom Data Inc., #904, Gasan A1 Tower, 205-27 Gasan 1-ro, Geumcheon-gu, Seoul 08503, Republic of Korea; tysong@haebomdata.com (T.S.); mirinae@haebomdata.com (M.K.)  
 ORCID: T.S. 0000-0002-4111-8959; M.K. 0000-0002-2534-3777  
 \* Correspondence: tysong@haebomdata.com (T.S.)
 
@@ -568,7 +568,7 @@ derived products are < 50 MB total.
 The KHOA tide-gauge data are provided under the Korean Open Government License.
 Earth Engine access was provided by Google for academic use. We thank the
 developers of pyTMD, Cartopy, UTide, and eo-tides for open-source tooling.
-Haebomdata Inc. has carried out the nationwide Blue Carbon Monitoring service
+Haebom Data Inc. has carried out the nationwide Blue Carbon Monitoring service
 commissioned by the Korea Marine Environment Management Corporation (KOEM); the
 present study was conducted independently of that contract.
 
