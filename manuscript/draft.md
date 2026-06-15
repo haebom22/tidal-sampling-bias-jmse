@@ -2,7 +2,7 @@
 title: |
   Predicting Tidal-Sampling Bias of Sun-Synchronous Satellites from Overpass Phase: Theory and Validation on Macrotidal Coasts
 author:
-  - "Taeyoon Song^1,2^, Mirinae Kim^1^"
+  - "Taeyoon Song^1,2^, Mirinae Kim^2^"
 date: "First draft v0.1 — 2026-05-21 · Target journal: *Remote Sensing of Environment* · ~6,900 words (incl. References)"
 documentclass: article
 classoption: [11pt, a4paper]

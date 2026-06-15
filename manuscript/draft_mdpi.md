@@ -2,7 +2,7 @@
 title: |
   Predicting Tidal-Sampling Bias of Sun-Synchronous Satellites from Overpass Phase: Theory and Validation on Macrotidal Coasts
 author:
-  - "Taeyoon Song^1,2^, Mirinae Kim^1^"
+  - "Taeyoon Song^1,2^, Mirinae Kim^2^"
 date: "Manuscript for *Remote Sensing* (MDPI)"
 documentclass: article
 classoption: [11pt, a4paper]
@@ -64,8 +64,8 @@ markdown form for weasyprint compatibility (the global md2pdf.py uses
 the first H1 as cover title and renders blockquotes for the abstract).
 -->
 
-^1^ Haebom Data Inc., #904, Gasan A1 Tower, 205-27 Gasan 1-ro, Geumcheon-gu, Seoul 08503, Republic of Korea; tysong@haebomdata.com (T.S.); mirinae@haebomdata.com (M.K.)  
-^2^ Department of Ocean Sciences, Inha University, Incheon 22212, Republic of Korea  
+^1^ Department of Ocean Sciences, Inha University, Incheon 22212, Republic of Korea  
+^2^ Haebom Data Inc., #904, Gasan A1 Tower, 205-27 Gasan 1-ro, Geumcheon-gu, Seoul 08503, Republic of Korea; tysong@haebomdata.com (T.S.); mirinae@haebomdata.com (M.K.)  
 ORCID: T.S. 0000-0002-4111-8959; M.K. 0000-0002-2534-3777  
 \* Correspondence: tysong@haebomdata.com (T.S.)
 

@@ -193,13 +193,13 @@ def main() -> None:
 \Title{{{title_tex}}}
 \TitleCitation{{{title_tex}}}
 
-\Author{{Taeyoon Song $^{{1,2,}}$*\orcidA{{}} and Mirinae Kim $^{{1}}$\orcidB{{}}}}
+\Author{{Taeyoon Song $^{{1,2,}}$*\orcidA{{}} and Mirinae Kim $^{{2}}$\orcidB{{}}}}
 \AuthorNames{{Taeyoon Song and Mirinae Kim}}
 \AuthorCitation{{Song, T.; Kim, M.}}
 
 \address{{%
-$^{{1}}$ \quad Haebom Data Inc., \#904, Gasan A1 Tower, 205-27 Gasan 1-ro, Geumcheon-gu, Seoul 08503, Republic of Korea; tysong@haebomdata.com (T.S.); mirinae@haebomdata.com (M.K.)\\
-$^{{2}}$ \quad Department of Ocean Sciences, Inha University, Incheon 22212, Republic of Korea}}
+$^{{1}}$ \quad Department of Ocean Sciences, Inha University, Incheon 22212, Republic of Korea\\
+$^{{2}}$ \quad Haebom Data Inc., \#904, Gasan A1 Tower, 205-27 Gasan 1-ro, Geumcheon-gu, Seoul 08503, Republic of Korea; tysong@haebomdata.com (T.S.); mirinae@haebomdata.com (M.K.)}}
 
 \corres{{Correspondence: tysong@haebomdata.com}}
 
