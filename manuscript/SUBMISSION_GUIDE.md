@@ -47,14 +47,19 @@ MDPI accepts **either** a Word **or** a LaTeX main manuscript — pick one route
 ### Route A — Word (.docx)
 | SuSy file type | File |
 |----------------|------|
-| **Manuscript** (main) | `draft_mdpi.docx` (continuous line numbers embedded) |
+| **Manuscript** (main) | `draft_mdpi_styled.docx` — official MDPI template styles (`scripts/build_docx_mdpi_styled.py`); or `draft_mdpi.docx` (generic styles) |
 | **Cover Letter** | `cover_letter_mdpi.pdf` |
 | **Supplementary** | `supplementary.docx` |
 | (if figures requested separately) | high-res PNGs in `manuscript/figures/` |
 
-> Our `.docx` has complete content but is not the mdpi.cls two-column layout.
-> Initial submission is usually accepted as-is; if pre-check asks for the
-> template, switch to Route B.
+> `draft_mdpi_styled.docx` is built from `remotesensing-template.dot` as the
+> pandoc reference doc, then each paragraph style is remapped to the MDPI named
+> styles (MDPI_1.2_title, MDPI_2.1_heading1, MDPI_3.1_text, MDPI_8.1_references,
+> …); it inherits the template's styles, headers/footers, page geometry and line
+> numbering. **Final Word touch-up still needed**: the template's running-head
+> sidebar (Citation / Copyright / Academic Editor) is editorial-filled, and the
+> affiliation footnote/superscript layout should be eyeballed. The plain
+> `draft_mdpi.docx` (generic styles, content-identical) remains as a fallback.
 
 ### Route B — LaTeX (official MDPI template, `Definitions/mdpi.cls`)
 Built by `scripts/build_latex_mdpi.py` from `draft_mdpi.md` into
