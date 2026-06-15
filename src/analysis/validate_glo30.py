@@ -6,10 +6,12 @@ WorldDEM. Pixels are 30 m and elevations are referenced to the
 EGM2008 geoid.
 
 Two transformations are needed before our 10 m waterline DEM (in the
-KHOA datum, ≈ Lowest Astronomical Tide) can be compared to GLO-30:
+KHOA datum, approximate lowest low water — ALLW, the sum of the M2, S2,
+K1, O1 amplitudes below mean sea level; distinct from and not equal to
+the lowest astronomical tide) can be compared to GLO-30:
 
-1. **Vertical datum**: KHOA ≈ LAT; GLO-30 = EGM2008 geoid.
-   The site-specific offset between LAT and EGM2008 is essentially the
+1. **Vertical datum**: KHOA = ALLW; GLO-30 = EGM2008 geoid.
+   The site-specific offset between ALLW and EGM2008 is essentially the
    mean sea level above the chart datum, available either from the
    KHOA MSL constant for the gauge or from the FES2022b z0 offset.
    We accept it as a CLI argument so the user can supply the value
@@ -161,7 +163,7 @@ def compare_to_glo30(
     khoa_to_egm2008_offset_m
         Add this to our DEM to convert KHOA datum → EGM2008 geoid
         before differencing. Typical Korean west coast values are
-        +2 to +5 m (MSL above LAT, then -geoid offset).
+        +2 to +5 m (MSL above ALLW, then -geoid offset).
     predicted_bias_m
         Predicted bias from the manuscript model (β·A·⟨cos θ⟩) for
         cross-comparison.

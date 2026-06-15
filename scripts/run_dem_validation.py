@@ -42,17 +42,18 @@ logging.basicConfig(
 )
 log = logging.getLogger("dem_validation")
 
-# Per-site KHOA datum (~ Lowest Astronomical Tide) → EGM2008 geoid offset.
-# Approximate from KHOA mean sea level (MSL above LAT) and EGM2008 geoid
-# heights at the gauge coordinates. Values in metres; positive offset
-# means KHOA z + offset = EGM2008 z. These are *first-order* defaults;
-# the user can override at the CLI.
+# Per-site KHOA datum (ALLW, approximate lowest low water) → EGM2008
+# geoid offset. Approximate from KHOA mean sea level (MSL above ALLW =
+# the sum of the M2, S2, K1, O1 amplitudes) and EGM2008 geoid heights at
+# the gauge coordinates. Values in metres; positive offset means
+# KHOA z + offset = EGM2008 z. These are *first-order* defaults; the
+# user can override at the CLI.
 KHOA_TO_EGM2008_M: dict[str, float] = {
     "garorim": 3.20,
     "suncheon": 1.80,
     "ganghwa": 4.30,
     "gomso": 3.50,
-    "hampyeong": 2.40,
+    "hampyeong": 3.20,
 }
 
 
