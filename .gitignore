@@ -50,3 +50,6 @@ manuscript/latex_mdpi/*.blg
 manuscript/latex_mdpi/*.out
 manuscript/latex_mdpi/*.xdv
 manuscript/*_latex_submission.zip
+
+# Renamed submission-ready copies (derived from build outputs)
+manuscript/submission/

@@ -1,11 +1,10 @@
 ---
 title: |
-  Supplementary Materials —
-  Phase-Predictable Tidal-Sampling Bias of Sun-Synchronous Optical
-  Satellites and Its Conversion into Waterline-DEM Errors over
-  the Macrotidal Korean Coast
-author: "[Author name TBD]^1^"
-date: "First draft v0.1 — 2026-05-21"
+  Supplementary Materials: Predicting Tidal-Sampling Bias of
+  Sun-Synchronous Satellites from Overpass Phase: Theory and
+  Validation on Macrotidal Coasts
+author: "Taeyoon Song^1,2^, Mirinae Kim^2^"
+date: ""
 geometry: margin=2.5cm
 linestretch: 2.0
 papersize: a4
@@ -52,6 +51,9 @@ header-includes:
   - \newunicodechar{σ}{\ensuremath{\sigma}}
   - \newunicodechar{∈}{\ensuremath{\in}}
 ---
+
+^1^ Department of Ocean Sciences, Inha University, Incheon 22212, Republic of Korea; ^2^ Haebom Data Inc., #904, Gasan A1 Tower, 205-27 Gasan 1-ro, Geumcheon-gu, Seoul 08503, Republic of Korea.  
+\* Correspondence: tysong@haebomdata.com
 
 This document accompanies the main manuscript and contains all
 supplementary figures, the extended Table S1, and pointers to the
@@ -176,9 +178,11 @@ hourly series at each KHOA gauge coordinate, derived from the eight
 major constituents (M₂, S₂, K₁, O₁, N₂, P₁, K₂, Q₁); the systematic
 under-estimate at Ganghwa-do (FES 1.02 m vs KHOA 2.83 m for the M₂
 component alone) reflects the inability of the 1/30° global grid to
-resolve within-bay tidal amplification, which is why the FES variant
-is used as a *complementary* astronomical reference rather than as a
-replacement for KHOA.
+resolve within-bay tidal amplification; consequently the FES variant
+yields *lower-bound* bias magnitudes where the grid under-resolves the
+local geometry, while still recovering the bias sign and functional form
+— the basis for the gauge-free *a priori* application demonstrated in
+main-text §4.8.
 
 ---
 
