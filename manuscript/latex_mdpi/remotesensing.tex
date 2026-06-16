@@ -155,9 +155,9 @@ it.
 quantified}\label{tidal-aliasing-a-recognised-problem-incompletely-quantified}
 
 Sun-synchronous orbits place all major Earth-observing optical
-satellites at near-fixed \emph{local solar times} (LST). The Landsat-8/9
-and Sentinel-2 missions all descend across the equator at LST
-\(\approx\) 10:00--10:30, drifting only by a few minutes per year.
+satellites at near-fixed \emph{local solar times}. The Landsat-8/9 and
+Sentinel-2 missions all descend across the equator at a local solar time
+of \(\approx\) 10:00--10:30, drifting only by a few minutes per year.
 Because the dominant semi-diurnal tidal constituent (\(M_{2}\), period
 12.42 h) is not a simple fraction of the solar day, satellite imagery
 samples the tide at an interval that is \textbf{incommensurate with the
@@ -469,10 +469,10 @@ We associate \(\phi\) with an angle \(\theta = 2\pi\phi\) such that
 \begin{itemize}
 \tightlist
 \item
-  Concentration vector \(\langle \cos\theta\rangle\),
+  Mean resultant vector \(\langle \cos\theta\rangle\),
   \(\langle \sin\theta\rangle\),
 \item
-  Concentration magnitude
+  Mean resultant length
   \(R = \sqrt{\langle \cos\theta\rangle^{2} + \langle \sin\theta\rangle^{2}} \in [0, 1]\),
 \item
   Circular mean phase \(\bar{\theta}\) and circular standard deviation.
@@ -488,7 +488,7 @@ For a near-symmetric, \(M_{2}\)-dominated tide, the elevation at time
 \]
 
 where \(A_{t}\) is the slowly varying envelope and \(\eta_{0}\) the mean
-sea level. The bias inherited by sampling at the satellite times
+water level. The bias inherited by sampling at the satellite times
 \(\{t_i\}\) relative to the dense reference is, to first order,
 
 \[
@@ -707,9 +707,9 @@ circular means per site (Figure 4). At the four western sites the mean
 phase clusters at 142--235\ensuremath{^\circ} (i.e., from ebb to early flood, near LW); at
 Suncheon Bay it lies at 32--56\ensuremath{^\circ} (just after HW, early ebb). Because the
 satellite overpass time is essentially fixed in \emph{local solar time}
-(Figure S2, peak at 11:00 KST at every site), the \emph{tidal} phase
-varies \emph{only} because the regional amphidromic system shifts the
-HW-LW timing.
+(Figure S2, peak at 11:00 KST --- i.e.~\(\approx\) 10:30 local solar
+time --- at every site), the \emph{tidal} phase varies \emph{only}
+because the regional amphidromic system shifts the HW-LW timing.
 
 \begin{figure}
 \centering
@@ -975,16 +975,15 @@ Wadden Sea / Inner German Bight, a classic semidiurnal tidal-flat coast
 \citep{heygster_2010}, and the Bay of Fundy / Minas Basin (the world's
 largest tidal range; semidiurnal). The Korean slope \(\beta = 1.78\) was
 applied unchanged. Table 4 reports, per site, the FES tidal amplitude
-\(A\), the satellite-overpass concentration
-\(\langle\cos\theta\rangle\), the model-predicted mean bias
-\(\beta\cdot A\cdot\langle\cos\theta\rangle\), and the FES-sampled bias
-(the mean FES tide at the overpass times, the harmonic series having
-zero time-mean).
+\(A\), the mean overpass-phase cosine \(\langle\cos\theta\rangle\), the
+model-predicted mean bias \(\beta\cdot A\cdot\langle\cos\theta\rangle\),
+and the FES-sampled bias (the mean FES tide at the overpass times, the
+harmonic series having zero time-mean).
 
 \begin{table}[!htbp]
 \centering
 \footnotesize
-\caption{\textbf{\textit{A priori} transferability of the bias model to macrotidal coasts outside Korea.} For each site the FES2022b amplitude $A$, satellite-overpass concentration $\langle\cos\theta\rangle$, model-predicted bias $\beta\cdot A\cdot\langle\cos\theta\rangle$ ($\beta = 1.78$, the Korean slope applied unchanged), and FES-sampled bias (mean FES tide at the real Landsat-8/9 + Sentinel-2 overpass times) are computed from global data alone, with no local tide gauge. $n$ = cloud-screened scenes (2020--2024, cloud $\leq$ 60\%).}
+\caption{\textbf{\textit{A priori} transferability of the bias model to macrotidal coasts outside Korea.} For each site the FES2022b amplitude $A$, mean overpass-phase cosine $\langle\cos\theta\rangle$, model-predicted bias $\beta\cdot A\cdot\langle\cos\theta\rangle$ ($\beta = 1.78$, the Korean slope applied unchanged), and FES-sampled bias (mean FES tide at the real Landsat-8/9 + Sentinel-2 overpass times) are computed from global data alone, with no local tide gauge. $n$ = cloud-screened scenes (2020--2024, cloud $\leq$ 60\%).}
 \label{tab:overseas}
 \renewcommand{\arraystretch}{1.2}
 \begin{adjustbox}{max width=\textwidth}
@@ -1013,7 +1012,7 @@ product. The German Wadden Sea, by contrast, shows only a \(+0.07\) m
 predicted bias (FES-sampled \(+0.16\) m). The Bay of Fundy is the most
 instructive case: despite the world's largest tidal amplitude (FES
 \(M_{2} = 6.4\) m), the predicted bias is negligible (\(-0.18\) m)
-because the near-10:30-LST overpass falls near mid-tide
+because the near-10:30 local-solar-time overpass falls near mid-tide
 (\(\langle\cos\theta\rangle \approx -0.02\)). This directly confirms
 Eq.\textasciitilde{}\eqref{eq:bias}: the systematic bias is set by the
 overpass \emph{phase} \(\langle\cos\theta\rangle\), not by tidal
@@ -1049,15 +1048,16 @@ significant margin. We identify three contributing mechanisms.
 \textbf{(i) Spring--neap covariance.} During spring tides (when the
 lunar \(M_{2}\) and solar \(S_{2}\) constituents reinforce each other),
 tidal amplitude is at its fortnightly maximum. The 14.77-day
-spring--neap cycle does not divide evenly into the 16- or 12-day
-sun-synchronous revisit cycles, so satellites preferentially catch
-certain phases of the spring--neap envelope. If those preferred phases
-also have \(\cos\theta < 0\) (LW-side overpasses, as in the western
-Korean sites), the time-mean of \(A\cdot\cos\theta\) is \emph{more
-negative} than \(\langle A\rangle\langle \cos\theta\rangle\), yielding
-\(\beta > 1\). A direct computation of \(\mathrm{cov}(A, \cos\theta)\)
-from the data (not shown here; see supplementary) yields covariance
-contributions of 0.15--0.30 m, consistent with the observed slope.
+spring--neap cycle does not divide evenly into the 16- and 10-day
+sun-synchronous optical revisit cycles, so satellites preferentially
+catch certain phases of the spring--neap envelope. If those preferred
+phases also have \(\cos\theta < 0\) (LW-side overpasses, as in the
+western Korean sites), the time-mean of \(A\cdot\cos\theta\) is
+\emph{more negative} than \(\langle A\rangle\langle \cos\theta\rangle\),
+yielding \(\beta > 1\). A direct computation of
+\(\mathrm{cov}(A, \cos\theta)\) from the data (not shown here; see
+supplementary) yields covariance contributions of 0.15--0.30 m,
+consistent with the observed slope.
 
 \textbf{(ii) Diurnal constituents (\(K_{1}\), \(O_{1}\)).} The Korean
 western coast has a mixed tidal regime in which two unequal high waters
@@ -1081,21 +1081,21 @@ The most novel finding is that the \emph{sign} of the mean bias reverses
 between the western and southern Korean coast. The Korean peninsula sits
 on the eastern edge of the Yellow Sea \(M_{2}\) amphidromic system (see
 Section 1.4) \citep{choi_2014_yellowsea}. The HW phase at Incheon
-(DT\_0001) lags the Yeosu HW phase by about 4 h: Yeosu HW arrives at LST
-\(\approx\) 10:00 (just before our 11:00 satellite peak), Incheon HW at
-LST \(\approx\) 14:00 (well after). Consequently, the 11:00 KST overpass
-catches different phases of the local tide:
+(DT\_0001) lags the Yeosu HW phase by about 4 h: Yeosu HW arrives at a
+local solar time of \(\approx\) 10:00 (just before the optical
+overpass), Incheon HW at \(\approx\) 14:00 (well after). Consequently,
+the optical overpass catches different phases of the local tide:
 
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Western sites (Incheon-phased)}: 11:00 \(\approx 3\) h before
-  HW \(\approx\) middle of ebb \(\approx\) phase \(\approx 235\ensuremath{^\circ}\)
-  (within our HW-to-HW convention)
+  \textbf{Western sites (Incheon-phased)}: the overpass falls
+  \(\approx 3\) h before HW \(\approx\) middle of ebb \(\approx\) phase
+  \(\approx 235\ensuremath{^\circ}\) (within our HW-to-HW convention)
   \(\Rightarrow \cos\theta < 0 \Rightarrow\) negative mean bias.
 \item
-  \textbf{Southern site (Yeosu-phased)}: 11:00 \(\approx 1\) h after HW
-  \(\approx\) early ebb \(\approx\) phase
+  \textbf{Southern site (Yeosu-phased)}: the overpass falls
+  \(\approx 1\) h after HW \(\approx\) early ebb \(\approx\) phase
   \(\approx 35\ensuremath{^\circ} \Rightarrow \cos\theta > 0 \Rightarrow\) positive mean
   bias.
 \end{itemize}
@@ -1147,8 +1147,8 @@ albeit only along sparse, discontinuous ground tracks.
 
 \textbf{(c) The need for radar integration: a theoretical basis for
 empirical multi-sensor data-collection-window optima.} Sentinel-1 SAR
-has overpasses near 06:00 and 18:00 LST, displaced from the optical
-11:00 LST by approximately 5 h. Since
+has overpasses near 06:00 and 18:00 local solar time, displaced from the
+\(\approx\) 10:30 optical overpass by roughly 5 h. Since
 \(5\,\text{h} \approx 0.4 \times M_{2}\) cycle, the SAR-time
 \(\langle \cos\theta\rangle\) is approximately orthogonal to the optical
 \(\langle \cos\theta\rangle\). A hybrid optical+SAR sample population
@@ -1353,8 +1353,8 @@ DEM elevation errors?):}
   scenes at the same overpass time only refine the histogram shape, not
   the systematic mean shift. Removing the bias requires sampling at
   substantially different overpass phases --- most practically by
-  integrating Sentinel-1 SAR observations at the 06:00 / 18:00 LST
-  orbit.
+  integrating Sentinel-1 SAR observations at the 06:00 / 18:00
+  local-solar-time orbit.
 \item
   The \(\beta \cdot A \cdot \langle \cos\theta\rangle\) model accounts
   for the saturation of empirically observed multi-sensor
