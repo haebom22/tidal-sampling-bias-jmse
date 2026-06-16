@@ -358,7 +358,7 @@ The intercept ($-0.06$ m) is small but significantly negative — the bootstrap 
 We tested the stability of Eq. \eqref{eq:bias} by re-fitting on partitioned subsets (Section 3.4). The slope and $R^{2}$ for each partition are summarised in Figure S3 (table values in Table S1):
 
 - **Annual stability** (one fit per year, 9–13 points each): slope 1.32–1.72, $R^{2}$ 0.85–0.95.
-- **Seasonal stability** (12–14 points each): slope 0.81–1.49, $R^{2}$ 0.85–0.98. The summer (JJA) slope is closest to the theoretical 1 (slope = 0.81); MAM has the highest $R^{2}$ (0.98).
+- **Seasonal stability** (12–14 points each): slope 0.81–1.49, $R^{2}$ 0.85–0.98. The summer (JJA) slope is the lowest and the only season below the leading-order value of 1 ($\beta$ = 0.81), consistent with weaker spring–neap covariance in summer; MAM has the highest $R^{2}$ (0.98).
 - **Sensor stability** (5 points each): slope 1.73 (L8), 2.01 (L9), 1.71 (S2). $R^{2} \geq 0.986$ for all three.
 - **Bootstrap CI** of pooled fit: $\beta \in [1.44, 1.91]$, intercept $\in [-0.21, -0.03]$.
 
