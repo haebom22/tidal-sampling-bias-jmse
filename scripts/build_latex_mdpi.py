@@ -140,7 +140,11 @@ def main() -> None:
 
     title_tex = deunicode(pandoc(title, []))
     abstract_tex = deunicode(pandoc(abstract, []))
-    body_tex = deunicode(pandoc(body_md, ["--natbib"]))
+    # The manuscript uses '##' for its main sections (the title is the YAML
+    # metadata, not an H1), so pandoc would map them to \subsection and number
+    # them 0.1, 0.2, ... — promote every heading one level so '##' -> \section
+    # (1, 2, 3 ...), matching the in-text "Section 3.5" cross-references.
+    body_tex = deunicode(pandoc(body_md, ["--natbib", "--shift-heading-level-by=-1"]))
 
     # In MDPI 'submit' mode the class needs a blank line before and after each
     # display-math environment for line numbering to stay continuous.

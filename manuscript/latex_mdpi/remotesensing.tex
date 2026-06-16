@@ -70,8 +70,8 @@ optical revisit frequency --- can close the gap.}
 
 \begin{document}
 
-\subsection*{Highlights}\label{highlights}
-\addcontentsline{toc}{subsection}{Highlights}
+\section*{Highlights}\label{highlights}
+\addcontentsline{toc}{section}{Highlights}
 
 \begin{itemize}
 \tightlist
@@ -92,9 +92,9 @@ optical revisit frequency --- can close the gap.}
   flats
 \end{itemize}
 
-\subsection{Introduction}\label{introduction}
+\section{Introduction}\label{introduction}
 
-\subsubsection{Tidal flats and the need for vertical
+\subsection{Tidal flats and the need for vertical
 reference}\label{tidal-flats-and-the-need-for-vertical-reference}
 
 Tidal flats are among the largest, most biologically productive, and
@@ -119,7 +119,7 @@ repeatable, centimetre-level intertidal elevation control over tidal
 flats, although its sparse, discontinuous ground tracks limit standalone
 DEM density \citep{xu_2022_icesat2_tidalflat}.
 
-\subsubsection{The waterline method}\label{the-waterline-method}
+\subsection{The waterline method}\label{the-waterline-method}
 
 The most widely used satellite-based alternative is the
 \textbf{waterline method}
@@ -151,7 +151,7 @@ miss part of the cycle, the missed elevation band is irrecoverable: no
 amount of additional imagery acquired at the same time-of-day can fill
 it.
 
-\subsubsection{Tidal aliasing: a recognised problem, incompletely
+\subsection{Tidal aliasing: a recognised problem, incompletely
 quantified}\label{tidal-aliasing-a-recognised-problem-incompletely-quantified}
 
 Sun-synchronous orbits place all major Earth-observing optical
@@ -240,7 +240,7 @@ Lee, J. et al. (2025, ECSS) & Taean Peninsula (W) & L8/9 + S2A/B + S1A & Multi-s
 \end{adjustbox}
 \end{table}
 
-\subsubsection{The Korean macrotidal
+\subsection{The Korean macrotidal
 context}\label{the-korean-macrotidal-context}
 
 The Korean western coast hosts approximately 2,500 km\(^{2}\) of
@@ -257,7 +257,7 @@ regional gradient, well-instrumented tide-gauge network --- makes Korea
 an ideal natural laboratory for \emph{quantifying} and \emph{predicting}
 the satellite tidal-sampling bias.
 
-\subsubsection{Contribution}\label{contribution}
+\subsection{Contribution}\label{contribution}
 
 This paper is positioned as a \emph{theoretical companion} to the
 empirical waterline-optimisation literature
@@ -307,9 +307,9 @@ strongly negative-bias regime (the macrotidal west coast) and a
 sign-reversed positive-bias regime (the southern amphidromic regime)
 within a single, densely instrumented tide-gauge network.
 
-\subsection{Study area and data}\label{study-area-and-data}
+\section{Study area and data}\label{study-area-and-data}
 
-\subsubsection{Sites}\label{sites}
+\subsection{Sites}\label{sites}
 
 Five tidal flats spanning the entire western and southern Korean coast
 were chosen to span the full range of local tidal amplitudes and
@@ -361,7 +361,7 @@ combination that drives the bipolar sampling bias documented in this
 paper. Inset: regional context.}
 \end{figure}
 
-\subsubsection{Tide-gauge reference: KHOA Open
+\subsection{Tide-gauge reference: KHOA Open
 API}\label{tide-gauge-reference-khoa-open-api}
 
 Hourly quality-controlled tide observations for 2020-01-01 to 2024-12-31
@@ -377,7 +377,7 @@ tide); we report all elevations in this datum. Brief acquisition outages
 (\(\leq\) 0.3 \% of dates) and four anomalous days at Incheon (DT\_0001;
 2020-10-01 to 2020-10-04) are tolerated as random missing data.
 
-\subsubsection{Satellite metadata: Google Earth
+\subsection{Satellite metadata: Google Earth
 Engine}\label{satellite-metadata-google-earth-engine}
 
 Per-scene metadata (acquisition time, scene ID, cloud-cover fraction,
@@ -417,9 +417,9 @@ Suncheon Bay & Yeosu (DT\_0016) & 43,688 & 70 / 38 / 435 & 2.0 \\
 Tide heights at each satellite acquisition time were obtained by linear
 interpolation of the hourly KHOA series between bracketing hours.
 
-\subsection{Materials and Methods}\label{materials-and-methods}
+\section{Materials and Methods}\label{materials-and-methods}
 
-\subsubsection{Aliasing metrics}\label{aliasing-metrics}
+\subsection{Aliasing metrics}\label{aliasing-metrics}
 
 For each (site, sensor) combination, we use the standard set of aliasing
 metrics introduced for sun-synchronous waterline analysis
@@ -449,7 +449,7 @@ metrics introduced for sun-synchronous waterline analysis
   in metres (KHOA datum).
 \end{itemize}
 
-\subsubsection{Tidal phase}\label{tidal-phase}
+\subsection{Tidal phase}\label{tidal-phase}
 
 Local high-water (HW) events were extracted from the hourly KHOA series
 by a peak-finding algorithm with a minimum inter-peak separation of 8 h
@@ -478,7 +478,7 @@ We associate \(\phi\) with an angle \(\theta = 2\pi\phi\) such that
   Circular mean phase \(\bar{\theta}\) and circular standard deviation.
 \end{itemize}
 
-\subsubsection{Analytical bias model}\label{analytical-bias-model}
+\subsection{Analytical bias model}\label{analytical-bias-model}
 
 For a near-symmetric, \(M_{2}\)-dominated tide, the elevation at time
 \(t\) can be written
@@ -527,7 +527,7 @@ of physical mechanisms that produce
 fit \(\beta\) by ordinary least squares (OLS) on the 15 (site, sensor)
 pairs.
 
-\subsubsection{Stability tests}\label{stability-tests}
+\subsection{Stability tests}\label{stability-tests}
 
 We test the temporal/sensor robustness of Eq. \eqref{eq:bias} by
 partitioning the data along four axes and re-fitting:
@@ -548,7 +548,7 @@ partitioning the data along four axes and re-fitting:
 A 2,000-resample bootstrap of the pooled (\(n = 15\)) fit yields
 confidence intervals on \(\beta\) and on the intercept.
 
-\subsubsection{Conversion to elevation-domain DEM
+\subsection{Conversion to elevation-domain DEM
 error}\label{conversion-to-elevation-domain-dem-error}
 
 Because every waterline is mapped to its tide-stage elevation, the bias
@@ -594,7 +594,7 @@ order-of-magnitude horizontal-error budget; a refined analysis with
 site-specific LiDAR or SRTM hypsometric curves would adjust the
 horizontal --- but not the vertical --- numbers proportionally.
 
-\subsubsection{Implementation}\label{implementation}
+\subsection{Implementation}\label{implementation}
 
 All analyses are reproducible from open data through the GitHub
 repository released with this paper (Data and code availability). The
@@ -617,9 +617,9 @@ harmonically synthesised at hourly cadence over 2020--2024. The FES2022b
 variant provides a fully independent, globally reproducible reference
 that requires no local tide-gauge access.
 
-\subsection{Results}\label{results}
+\section{Results}\label{results}
 
-\subsubsection{Cross-site tidal sampling distributions reveal a bipolar
+\subsection{Cross-site tidal sampling distributions reveal a bipolar
 bias}\label{cross-site-tidal-sampling-distributions-reveal-a-bipolar-bias}
 
 Figure 2 shows the empirical distribution of tide heights (in the KHOA
@@ -698,7 +698,7 @@ Hampyeong & S2 & 796 & 0.73 & 0.23 & 0.03 & $-0.52$ \\
 \end{adjustbox}
 \end{table}
 
-\subsubsection{The bipolar bias is set by the satellite-overpass tide
+\subsection{The bipolar bias is set by the satellite-overpass tide
 phase}\label{the-bipolar-bias-is-set-by-the-satellite-overpass-tide-phase}
 
 For every satellite acquisition we computed the normalised tide phase
@@ -722,7 +722,7 @@ the immediate cause of the sign reversal of the mean bias, and is the
 input to the analytical model of Eq. \eqref{eq:bias}.}
 \end{figure}
 
-\subsubsection{\texorpdfstring{A one-parameter model predicts mean bias
+\subsection{\texorpdfstring{A one-parameter model predicts mean bias
 with
 \(R^{2} = 0.98\)}{A one-parameter model predicts mean bias with R\^{}\{2\} = 0.98}}\label{a-one-parameter-model-predicts-mean-bias-with-r2-0.98}
 
@@ -764,8 +764,8 @@ the bias is set by satellite-overpass phase alone; the slope
 \(\beta > 1\) is attributable to spring--neap covariance (Section 5.1).}
 \end{figure}
 
-\subsubsection{The regression is stable across years, seasons, sensors,
-and held-out
+\subsection{The regression is stable across years, seasons, sensors, and
+held-out
 sites}\label{the-regression-is-stable-across-years-seasons-sensors-and-held-out-sites}
 
 We tested the stability of Eq. \eqref{eq:bias} by re-fitting on
@@ -815,7 +815,7 @@ the sign-reversed Suncheon Bay despite its absence from the training set
 sites.}
 \end{figure}
 
-\subsubsection{Tide-height bias translates into 0.36--1.09 m
+\subsection{Tide-height bias translates into 0.36--1.09 m
 elevation-domain
 RMSE}\label{tide-height-bias-translates-into-0.361.09-m-elevation-domain-rmse}
 
@@ -862,7 +862,7 @@ RMSE of \textbf{179 m (Suncheon) to 1,359 m (Ganghwa)}.
 \caption{\textbf{Waterline-DEM coverage and error budget per site.} \textbf{(a)} Sampled vs missing elevation bands: grey = elevation range covered by the satellite-sampled tides; red = upper-tide truncation (irrecoverable); blue = lower-tide truncation. The truncation bands occupy 1.36--2.02 m of vertical range at the western sites and 0.99 m at Suncheon Bay; these bands cannot be filled by additional optical scenes at the same overpass time. \textbf{(b)} Per-site vertical (left) and horizontal-equivalent (right) RMSE and $|\text{mean bias}|$, averaged across the three sensors. The horizontal RMSE depends jointly on the vertical RMSE and on the assumed tidal-flat slope; Ganghwa-do, where vertical RMSE peaks and the flat is gentlest, carries the largest horizontal error budget (over 1.3 km).}
 \end{figure}
 
-\subsubsection{Increasing optical revisit frequency does not remove the
+\subsection{Increasing optical revisit frequency does not remove the
 bias}\label{increasing-optical-revisit-frequency-does-not-remove-the-bias}
 
 Sentinel-2 contributes 826 scenes at Ganghwa-do versus 137 for Landsat
@@ -877,7 +877,7 @@ Refining the histogram shape (lower KS statistic, lower
 distribution-shape error) is possible with more scenes; \emph{correcting
 the systematic mean shift is not}.
 
-\subsubsection{Robustness to amplitude definition and reference
+\subsection{Robustness to amplitude definition and reference
 choice}\label{robustness-to-amplitude-definition-and-reference-choice}
 
 We test the robustness of the headline \(\beta = 1.78\) fit (Section
@@ -963,7 +963,7 @@ slope, that carries the \emph{a priori} predictive power, supporting the
 a-priori applicability claimed in Section 5.3(a) for any waterline-DEM
 user without local tide-gauge access.
 
-\subsubsection{A priori transferability to macrotidal coasts outside
+\subsection{A priori transferability to macrotidal coasts outside
 Korea}\label{a-priori-transferability-to-macrotidal-coasts-outside-korea}
 
 To test whether the bias model is specific to Korea or generalises, we
@@ -1037,9 +1037,9 @@ is not a Korean artefact and, more usefully, that it can be run anywhere
 from open global data to flag \emph{which} macrotidal coasts and
 waterline-DEM products are most exposed to the sampling bias.
 
-\subsection{Discussion}\label{discussion}
+\section{Discussion}\label{discussion}
 
-\subsubsection{\texorpdfstring{Physical interpretation of
+\subsection{\texorpdfstring{Physical interpretation of
 \(\beta > 1\)}{Physical interpretation of \textbackslash beta \textgreater{} 1}}\label{physical-interpretation-of-beta-1}
 
 The leading-order theory (Section 3.3) predicts \(\beta = 1\): the mean
@@ -1076,7 +1076,7 @@ sensitivity test in Section 4.7. Using the mean-HW-LW envelope inflates
 \(A\) relative to the pure \(M_{2}\) amplitude only slightly, leaving
 residual slope contributions to mechanisms (i)--(ii).
 
-\subsubsection{The bipolar bias: a regional amphidromic
+\subsection{The bipolar bias: a regional amphidromic
 phenomenon}\label{the-bipolar-bias-a-regional-amphidromic-phenomenon}
 
 The most novel finding is that the \emph{sign} of the mean bias reverses
@@ -1114,7 +1114,7 @@ workflow the sign of the bias reverses across the regional amphidromic
 structure}, independently of the satellite or the local tidal range
 alone. We return to candidate analogous regions in Section 5.5.
 
-\subsubsection{Implications for waterline DEM
+\subsection{Implications for waterline DEM
 literature}\label{implications-for-waterline-dem-literature}
 
 Three implications follow.
@@ -1209,7 +1209,7 @@ govern Eq. \eqref{eq:bias} produce a substantially shorter
 collection-window optimum than at the Taean Peninsula. A dedicated test
 of these predictions is the natural next step.
 
-\subsubsection{Limitations}\label{limitations}
+\subsection{Limitations}\label{limitations}
 
 \textbf{(i) Planar-slope assumption.} The horizontal-domain numbers
 (1.06--2.53 km truncation widths) assume a uniform planar slope per
@@ -1260,7 +1260,7 @@ many scenes likely partly contaminated; tightening this threshold
 reduces sample size but minimally changes the bias metrics (tested at 30
 \% threshold, results within \(\pm 2\) \% of all stats).
 
-\subsubsection{Generality}\label{generality}
+\subsection{Generality}\label{generality}
 
 The analytical model (Eq. \eqref{eq:bias}) is \emph{not} specific to
 Korea: it depends only on the local tidal amplitude and on the satellite
@@ -1302,7 +1302,7 @@ In the absence of gauge data, the first-order correction with
 \(\beta = 1\) already captures the sign and leading-order magnitude of
 the bias.
 
-\subsection{Conclusions}\label{conclusions}
+\section{Conclusions}\label{conclusions}
 
 These results directly answer the three open questions of Section 1.3.
 
@@ -1417,8 +1417,8 @@ combined-population \(|\langle \cos\theta\rangle|\) by approximately 50
 gain that no increase in revisit frequency on a single sun-synchronous
 orbit can match.
 
-\subsection*{Supplementary Materials}\label{supplementary-materials}
-\addcontentsline{toc}{subsection}{Supplementary Materials}
+\section*{Supplementary Materials}\label{supplementary-materials}
+\addcontentsline{toc}{section}{Supplementary Materials}
 
 The following supporting information can be downloaded at the journal
 website: Figures S1--S7 (sampling-distribution CDFs, overpass-hour
@@ -1426,8 +1426,8 @@ histograms, coefficient-stability summaries, per-elevation error curves,
 and cross-section schematics) and Tables S1--S2 (per-partition
 regression coefficients and the amplitude/reference sensitivity tables).
 
-\subsection*{Author Contributions}\label{author-contributions}
-\addcontentsline{toc}{subsection}{Author Contributions}
+\section*{Author Contributions}\label{author-contributions}
+\addcontentsline{toc}{section}{Author Contributions}
 
 Conceptualization, T.S.; methodology, T.S.; software, T.S.; validation,
 T.S. and M.K.; formal analysis, T.S.; investigation, T.S.; data
@@ -1436,28 +1436,27 @@ writing---review and editing, T.S. and M.K.; visualization, T.S.;
 supervision, T.S.; project administration, T.S. All authors have read
 and agreed to the published version of the manuscript.
 
-\subsection*{Funding}\label{funding}
-\addcontentsline{toc}{subsection}{Funding}
+\section*{Funding}\label{funding}
+\addcontentsline{toc}{section}{Funding}
 
 This research was supported by the \emph{2026 National Blue Carbon
 Monitoring} project commissioned by the Korea Marine Environment
 Management Corporation (KOEM) (No. R26TA01845857-00).
 
-\subsection*{Institutional Review Board
+\section*{Institutional Review Board
 Statement}\label{institutional-review-board-statement}
-\addcontentsline{toc}{subsection}{Institutional Review Board Statement}
+\addcontentsline{toc}{section}{Institutional Review Board Statement}
 
 Not applicable.
 
-\subsection*{Informed Consent
-Statement}\label{informed-consent-statement}
-\addcontentsline{toc}{subsection}{Informed Consent Statement}
+\section*{Informed Consent Statement}\label{informed-consent-statement}
+\addcontentsline{toc}{section}{Informed Consent Statement}
 
 Not applicable.
 
-\subsection*{Data Availability
+\section*{Data Availability
 Statement}\label{data-availability-statement}
-\addcontentsline{toc}{subsection}{Data Availability Statement}
+\addcontentsline{toc}{section}{Data Availability Statement}
 
 All raw KHOA tide-gauge data are publicly available through the Korea
 Open Data Portal (\texttt{apis.\allowbreak{}data.\allowbreak{}go.\allowbreak{}kr/\allowbreak{}1192136}). Google Earth Engine
@@ -1469,15 +1468,15 @@ Zenodo-archived GitHub repository upon acceptance (DOI to be assigned).
 The intermediate \texttt{multisite\_\allowbreak{}5y\_\allowbreak{}*.\allowbreak{}parquet} and
 \texttt{dem\_\allowbreak{}error\_\allowbreak{}*.\allowbreak{}csv} derived products are \textless{} 50 MB total.
 
-\subsection*{Acknowledgments}\label{acknowledgments}
-\addcontentsline{toc}{subsection}{Acknowledgments}
+\section*{Acknowledgments}\label{acknowledgments}
+\addcontentsline{toc}{section}{Acknowledgments}
 
 The KHOA tide-gauge data are provided under the Korean Open Government
 License. Earth Engine access was provided by Google for academic use. We
 thank the developers of pyTMD, Cartopy, UTide, and eo-tides for
 open-source tooling.
 
-\subsection{Declaration of Generative AI and AI-Assisted Technologies in
+\section{Declaration of Generative AI and AI-Assisted Technologies in
 the Writing
 Process}\label{declaration-of-generative-ai-and-ai-assisted-technologies-in-the-writing-process}
 
@@ -1487,8 +1486,8 @@ template, condensing the abstract, and language editing. After using
 this tool, the authors reviewed and edited the content as needed and
 take full responsibility for the content of the publication.
 
-\subsection*{Conflicts of Interest}\label{conflicts-of-interest}
-\addcontentsline{toc}{subsection}{Conflicts of Interest}
+\section*{Conflicts of Interest}\label{conflicts-of-interest}
+\addcontentsline{toc}{section}{Conflicts of Interest}
 
 Both authors are employees of Haebom Data Inc., which carries out the
 2026 National Blue Carbon Monitoring service commissioned by the Korea
