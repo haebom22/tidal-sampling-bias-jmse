@@ -367,7 +367,7 @@ API}\label{tide-gauge-reference-khoa-open-api}
 Hourly quality-controlled tide observations for 2020-01-01 to 2024-12-31
 were retrieved through the Korea Hydrographic and Oceanographic Agency
 (KHOA) Open API, hosted on the Korean public data portal
-(\texttt{apis.data.go.kr/1192136/hourlyTide}). For each of the five
+(\texttt{apis.\allowbreak{}data.\allowbreak{}go.\allowbreak{}kr/\allowbreak{}1192136/\allowbreak{}hourlyTide}). For each of the five
 gauge stations we accumulated 42,674--43,839 hourly samples (\(>\) 99.5
 \% coverage). Tide heights are stored in the \emph{KHOA datum}
 (approximate lowest low water, ALLW --- the sum of the amplitudes of the
@@ -383,9 +383,9 @@ Engine}\label{satellite-metadata-google-earth-engine}
 Per-scene metadata (acquisition time, scene ID, cloud-cover fraction,
 WRS/MGRS tile) were extracted from Google Earth Engine
 \citep{gorelick_2017_gee} for three optical sensors over the 2020--2024
-period: Landsat 8 (\texttt{LANDSAT/LC08/C02/T1\_L2}; 2013-04--present),
-Landsat 9 (\texttt{LANDSAT/LC09/C02/T1\_L2}; 2021-10--present), and the
-European Sentinel-2 mission (\texttt{COPERNICUS/S2\_HARMONIZED};
+period: Landsat 8 (\texttt{LANDSAT/\allowbreak{}LC08/\allowbreak{}C02/\allowbreak{}T1\_\allowbreak{}L2}; 2013-04--present),
+Landsat 9 (\texttt{LANDSAT/\allowbreak{}LC09/\allowbreak{}C02/\allowbreak{}T1\_\allowbreak{}L2}; 2021-10--present), and the
+European Sentinel-2 mission (\texttt{COPERNICUS/\allowbreak{}S2\_\allowbreak{}HARMONIZED};
 2015-06--present; \citep{drusch_2012_s2}).
 
 Pixel data were not required: this is a \emph{metadata} analysis. Scenes
@@ -609,7 +609,7 @@ records (UTide; \citep{codiga_2011_utide}), which removes
 weather-induced residuals but preserves site-specific constituent
 amplitudes derived from local observations; and (ii) the global ocean
 tide model \textbf{FES2022b} (\citep{lyard_2021_fes2014}; AVISO
-\texttt{ocean\_tide\_extrapolated} grids at 1/30\ensuremath{^\circ} resolution), from
+\texttt{ocean\_\allowbreak{}tide\_\allowbreak{}extrapolated} grids at 1/30\ensuremath{^\circ} resolution), from
 which per-constituent amplitudes and phases for eight major constituents
 (\(M_{2}\), \(S_{2}\), \(K_{1}\), \(O_{1}\), \(N_{2}\), \(P_{1}\),
 \(K_{2}\), \(Q_{1}\)) are interpolated at each KHOA gauge coordinate and
@@ -1441,7 +1441,7 @@ and agreed to the published version of the manuscript.
 
 This research was supported by the \emph{2026 National Blue Carbon
 Monitoring} project commissioned by the Korea Marine Environment
-Management Corporation (KOEM) (No.~R26TA01845857-00).
+Management Corporation (KOEM) (No. R26TA01845857-00).
 
 \subsection*{Institutional Review Board
 Statement}\label{institutional-review-board-statement}
@@ -1460,14 +1460,14 @@ Statement}\label{data-availability-statement}
 \addcontentsline{toc}{subsection}{Data Availability Statement}
 
 All raw KHOA tide-gauge data are publicly available through the Korea
-Open Data Portal (\texttt{apis.data.go.kr/1192136}). Google Earth Engine
+Open Data Portal (\texttt{apis.\allowbreak{}data.\allowbreak{}go.\allowbreak{}kr/\allowbreak{}1192136}). Google Earth Engine
 scene metadata is reproducible from the public collections
 LANDSAT/LC08/C02/T1\_L2, LANDSAT/LC09/C02/T1\_L2, and
 COPERNICUS/S2\_HARMONIZED. The full analytical pipeline, derived
 parquet/CSV tables, and figure-generation scripts will be released on a
 Zenodo-archived GitHub repository upon acceptance (DOI to be assigned).
-The intermediate \texttt{multisite\_5y\_*.parquet} and
-\texttt{dem\_error\_*.csv} derived products are \textless{} 50 MB total.
+The intermediate \texttt{multisite\_\allowbreak{}5y\_\allowbreak{}*.\allowbreak{}parquet} and
+\texttt{dem\_\allowbreak{}error\_\allowbreak{}*.\allowbreak{}csv} derived products are \textless{} 50 MB total.
 
 \subsection*{Acknowledgments}\label{acknowledgments}
 \addcontentsline{toc}{subsection}{Acknowledgments}
