@@ -535,8 +535,9 @@ amplitude/reference sensitivity tables).
 Conceptualization, T.S.; methodology, T.S.; software, T.S.; validation, T.S. and
 M.K.; formal analysis, T.S.; investigation, T.S.; data curation, T.S. and M.K.;
 writing—original draft preparation, T.S.; writing—review and editing, T.S. and
-M.K.; visualization, T.S.; supervision, T.S.; project administration, T.S. All
-authors have read and agreed to the published version of the manuscript.
+M.K.; visualization, T.S.; supervision, T.S.; project administration, T.S.;
+funding acquisition, M.K. All authors have read and agreed to the published
+version of the manuscript.
 
 ## Funding
 
