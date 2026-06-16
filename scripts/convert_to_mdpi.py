@@ -182,12 +182,6 @@ released on a Zenodo-archived GitHub repository upon acceptance (DOI to be
 assigned). The intermediate `multisite_5y_*.parquet` and `dem_error_*.csv`
 derived products are < 50 MB total.
 
-## Acknowledgments
-
-The KHOA tide-gauge data are provided under the Korean Open Government License.
-Earth Engine access was provided by Google for academic use. We thank the
-developers of pyTMD, Cartopy, UTide, and eo-tides for open-source tooling.
-
 ## Declaration of Generative AI and AI-Assisted Technologies in the Writing Process
 
 During the preparation of this manuscript, the authors used Claude (Anthropic) to
@@ -195,6 +189,12 @@ assist with formatting the manuscript to the journal template, condensing the
 abstract, and language editing. After using this tool, the authors reviewed and
 edited the content as needed and take full responsibility for the content of the
 publication.
+
+## Acknowledgments
+
+The KHOA tide-gauge data are provided under the Korean Open Government License.
+Earth Engine access was provided by Google for academic use. We thank the
+developers of pyTMD, Cartopy, UTide, and eo-tides for open-source tooling.
 
 ## Conflicts of Interest
 
