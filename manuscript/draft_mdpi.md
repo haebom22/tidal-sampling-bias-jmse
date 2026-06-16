@@ -563,7 +563,7 @@ released on a Zenodo-archived GitHub repository upon acceptance (DOI to be
 assigned). The intermediate `multisite_5y_*.parquet` and `dem_error_*.csv`
 derived products are < 50 MB total.
 
-## Declaration of Generative AI and AI-Assisted Technologies in the Writing Process
+## Use of Artificial Intelligence
 
 During the preparation of this manuscript, the authors used Claude (Anthropic) to
 assist with formatting the manuscript to the journal template, condensing the

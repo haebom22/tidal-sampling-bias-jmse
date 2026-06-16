@@ -29,8 +29,8 @@ OUT = MS / "latex_mdpi"
 UNNUMBERED = {
     "Highlights", "Supplementary Materials", "Author Contributions", "Funding",
     "Institutional Review Board Statement", "Informed Consent Statement",
-    "Data Availability Statement", "Acknowledgments", "Acknowledgements",
-    "Conflicts of Interest",
+    "Data Availability Statement", "Use of Artificial Intelligence",
+    "Acknowledgments", "Acknowledgements", "Conflicts of Interest",
 }
 
 
