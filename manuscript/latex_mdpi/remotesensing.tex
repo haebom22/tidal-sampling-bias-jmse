@@ -954,14 +954,12 @@ the Incheon-gauge coordinate is 1.02 m versus 2.83 m from the local
 harmonic decomposition of the KHOA record, reflecting the inability of a
 global grid to capture the funnel-shape resonance of the Han River
 estuary. Despite this amplitude under-estimate the fit \emph{structure}
-is preserved (and at Suncheon Bay the FES variant predicts a slightly
-larger positive bias of +0.32 to +0.52 m than KHOA's +0.29 to +0.39 m,
-consistent with the global grid's lack of the south-coast intra-bay
-phase lag); its excellent overall fit (\(R^{2} = 0.983\)) confirms that
-it is the model \emph{structure}, not the precise value of the fitted
-slope, that carries the \emph{a priori} predictive power, supporting the
-a-priori applicability claimed in Section 5.3(a) for any waterline-DEM
-user without local tide-gauge access.
+is preserved --- the bias sign is correct at every site and the overall
+fit remains excellent (\(R^{2} = 0.983\)) --- and at Suncheon Bay the
+FES variant predicts a slightly larger positive bias (+0.32 to +0.52 m
+vs KHOA's +0.29 to +0.39 m), consistent with the global grid's lack of
+the south-coast intra-bay phase lag. The consequences for gauge-free
+\emph{a priori} application are developed in Section 5.3(a).
 
 \subsection{A priori transferability to macrotidal coasts outside
 Korea}\label{a-priori-transferability-to-macrotidal-coasts-outside-korea}
@@ -1281,26 +1279,16 @@ overpass phase happens to fall near mid-tide --- a direct confirmation
 that it is the overpass phase \(\langle\cos\theta\rangle\), not the
 tidal amplitude, that governs the bias.
 
-An important distinction must be drawn between the \emph{structure} of
-the model and the \emph{value} of its fitted coefficient. The model
-structure --- mean bias proportional to
-\(A \cdot \langle \cos\theta\rangle\) --- is derived from first
-principles (Section 3.3) and is universal for any sun-synchronous
-optical sensor over any tidally dominated coast. The fitted slope
-\(\beta = 1.78\) absorbs the spring--neap covariance specific to the
-Korean \(M_{2}\)/\(S_{2}\) regime (Section 5.1) and may differ
-elsewhere; the physical mechanism that drives \(\beta > 1\), however, is
-itself generic: wherever the spring--neap beat frequency is
-incommensurate with the satellite revisit cycle, a non-zero
-\(\mathrm{cov}(A, \cos\theta)\) will inflate \(\beta\) above its
-theoretical floor of 1. Users outside Korea need not adopt 1.78
-directly; the recommended workflow is to compute
-\(\langle \cos\theta\rangle\) from their own scene metadata and a global
-tide model (e.g., FES2022b or TPXO), then --- if local gauge data are
-available --- fit a site-specific \(\beta\) to calibrate the correction.
-In the absence of gauge data, the first-order correction with
-\(\beta = 1\) already captures the sign and leading-order magnitude of
-the bias.
+The model \emph{structure} --- mean bias proportional to
+\(A \cdot \langle \cos\theta\rangle\) --- is universal (Section 3.3);
+only the fitted slope \(\beta = 1.78\) is regional, absorbing the Korean
+\(M_{2}\)/\(S_{2}\) spring--neap covariance (Section 5.1) and liable to
+differ elsewhere. The recommended workflow for users outside Korea is
+therefore to compute \(\langle \cos\theta\rangle\) from their own scene
+metadata and a global tide model (e.g., FES2022b or TPXO) and, where
+local gauge data are available, fit a site-specific \(\beta\); in their
+absence the first-order correction (\(\beta = 1\)) already captures the
+sign and leading-order magnitude of the bias.
 
 \section{Conclusions}\label{conclusions}
 
