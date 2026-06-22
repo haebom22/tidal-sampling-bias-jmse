@@ -10,6 +10,8 @@ authors:
     given-names: Mirinae
     affiliation: "Haebom Data Inc., Republic of Korea"
 license: MIT
+doi: 10.5281/zenodo.20797099
+version: v1.0.0
 repository-code: "https://github.com/haebom22/tidal-sampling-bias-jmse"
 keywords:
   - tidal flat

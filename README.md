@@ -136,8 +136,9 @@ Raw KHOA tide-gauge data are public via the Korea Open Data Portal
 (`apis.data.go.kr/1192136`); GEE scene metadata is reproducible from the public
 collections `LANDSAT/LC08/C02/T1_L2`, `LANDSAT/LC09/C02/T1_L2`,
 `COPERNICUS/S2_HARMONIZED`. The derived tables, analytical pipeline, and
-figure-generation scripts are released as a Zenodo-archived snapshot of this
-repository (`tidal-sampling-bias`); the DOI will be assigned upon acceptance.
+figure-generation scripts are archived on Zenodo at
+[https://doi.org/10.5281/zenodo.20797099](https://doi.org/10.5281/zenodo.20797099) (snapshot of this repository,
+`tidal-sampling-bias-jmse`).
 
 ## Citation
 

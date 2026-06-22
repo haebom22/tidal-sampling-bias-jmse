@@ -559,11 +559,9 @@ Not applicable.
 All raw KHOA tide-gauge data are publicly available through the Korea Open Data
 Portal (`apis.data.go.kr/1192136`). Google Earth Engine scene metadata is
 reproducible from the public collections LANDSAT/LC08/C02/T1_L2,
-LANDSAT/LC09/C02/T1_L2, and COPERNICUS/S2_HARMONIZED. The full analytical
-pipeline, derived parquet/CSV tables, and figure-generation scripts will be
-released on a Zenodo-archived GitHub repository upon acceptance (DOI to be
-assigned). The intermediate `multisite_5y_*.parquet` and `dem_error_*.csv`
-derived products are < 50 MB total.
+LANDSAT/LC09/C02/T1_L2, and COPERNICUS/S2_HARMONIZED. The derived
+tables, analytical pipeline, and figure-generation scripts are openly
+available in Zenodo at https://doi.org/10.5281/zenodo.20797099.
 
 ## Use of Artificial Intelligence
 
