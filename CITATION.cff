@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite it using the metadata below."
+title: "Reproducibility pipeline and manuscript: A Gauge-Free Predictive Model for the Tidal-Sampling Bias of Sun-Synchronous Satellites, Validated on Macrotidal Tidal Flats"
+type: software
+authors:
+  - family-names: Song
+    given-names: Taeyoon
+    affiliation: "Inha University; Haebom Data Inc., Republic of Korea"
+  - family-names: Kim
+    given-names: Mirinae
+    affiliation: "Haebom Data Inc., Republic of Korea"
+license: MIT
+repository-code: "https://github.com/haebom22/tidal-sampling-bias-jmse"
+keywords:
+  - tidal flat
+  - intertidal DEM
+  - waterline method
+  - tidal aliasing
+  - sun-synchronous orbit
+  - amphidromic system

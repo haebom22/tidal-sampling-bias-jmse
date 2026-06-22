@@ -1,0 +1,25 @@
+{
+  "title": "Reproducibility pipeline and manuscript for: A Gauge-Free Predictive Model for the Tidal-Sampling Bias of Sun-Synchronous Satellites, Validated on Macrotidal Tidal Flats",
+  "upload_type": "software",
+  "description": "Code, derived-data pipeline, and manuscript sources for the study deriving and validating a closed-form model (mean bias = beta * A * <cos theta>) for the systematic tide-sampling bias of optical waterline intertidal DEMs, over five macrotidal Korean tidal flats (2020-2024). Submitted to the Journal of Marine Science and Engineering (MDPI).",
+  "license": "MIT",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Song, Taeyoon",
+      "affiliation": "Inha University; Haebom Data Inc., Republic of Korea"
+    },
+    {
+      "name": "Kim, Mirinae",
+      "affiliation": "Haebom Data Inc., Republic of Korea"
+    }
+  ],
+  "keywords": [
+    "tidal flat",
+    "intertidal DEM",
+    "waterline method",
+    "tidal aliasing",
+    "sun-synchronous orbit",
+    "amphidromic system"
+  ]
+}
