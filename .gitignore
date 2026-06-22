@@ -58,3 +58,23 @@ manuscript/submission/
 manuscript/저자정보/
 manuscript/REVIEW_REPORT_paper1.md
 manuscript/figures_maintext.zip
+
+# Legacy / non-JMSE manuscript working files — kept locally, not published.
+# (Only the JMSE submission set is tracked: draft_mdpi.*, supplementary.*,
+#  cover_letter_mdpi.*, jmse_submission/, figures/, references.bib, mdpi.csl)
+manuscript/README.md
+manuscript/SUBMISSION_CHECKLIST.md
+manuscript/SUBMISSION_GUIDE.md
+manuscript/figure_captions.md
+manuscript/abstract_ko.md
+manuscript/highlights.md
+manuscript/graphical_abstract.md
+manuscript/remotesensing-template.dot
+manuscript/draft.*
+manuscript/draft_ko.*
+manuscript/draft_mdpi_styled.docx
+manuscript/cover_letter.*
+manuscript/latex_mdpi/
+manuscript/related_work/
+manuscript/table2_error.png
+manuscript/table_error.png
