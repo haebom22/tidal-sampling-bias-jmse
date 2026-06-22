@@ -53,3 +53,8 @@ manuscript/*_latex_submission.zip
 
 # Renamed submission-ready copies (derived from build outputs)
 manuscript/submission/
+
+# Author personal info and internal review reports — never publish
+manuscript/저자정보/
+manuscript/REVIEW_REPORT_paper1.md
+manuscript/figures_maintext.zip
