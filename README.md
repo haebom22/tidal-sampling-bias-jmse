@@ -145,6 +145,13 @@ Song, T.; Kim, M. *A Gauge-Free Predictive Model for the Tidal-Sampling Bias of
 Sun-Synchronous Satellites, Validated on Macrotidal Tidal Flats.* Journal of
 Marine Science and Engineering (under review). DOI to be assigned.
 
+## License
+
+Code (`src/`, `scripts/`, `config/`, `notebooks/`) is released under the MIT
+License (see [`LICENSE`](LICENSE)). The manuscript text and figures under
+`manuscript/` are © the authors and are available under CC BY 4.0 upon
+publication per the journal's open-access policy.
+
 ## Key references
 
 - Bishop-Taylor, R. et al. (2019). Between the tides… *Estuarine, Coastal and Shelf Science* 223, 115–128.

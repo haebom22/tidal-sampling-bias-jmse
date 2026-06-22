@@ -1,6 +1,6 @@
 earthengine-api>=0.1.400
 geemap>=0.32.0
-pyTMD>=2.1.0
+pyfes>=2024.1   # CNES/AVISO engine for FES2022b tide synthesis (see src/tides/fes2014.py)
 numpy>=1.26
 pandas>=2.2
 pyarrow>=15.0
