@@ -54,6 +54,9 @@ manuscript/*_latex_submission.zip
 # Renamed submission-ready copies (derived from build outputs)
 manuscript/submission/
 
+# Internal agent/workflow notes — not for publication
+AGENTS.md
+
 # Author personal info and internal review reports — never publish
 manuscript/저자정보/
 manuscript/REVIEW_REPORT_paper1.md
