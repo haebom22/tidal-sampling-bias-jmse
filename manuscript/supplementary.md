@@ -1,8 +1,8 @@
 ---
 title: |
-  Supplementary Materials: Predicting Tidal-Sampling Bias of
-  Sun-Synchronous Satellites from Overpass Phase: Theory and
-  Validation on Macrotidal Coasts
+  Supplementary Materials: A Gauge-Free Predictive Model for the
+  Tidal-Sampling Bias of Sun-Synchronous Satellites, Validated on
+  Macrotidal Tidal Flats
 author: "Taeyoon Song^1,2^, Mirinae Kim^2^"
 date: ""
 geometry: margin=2.5cm
@@ -126,7 +126,7 @@ mean / 95 % CI is reported on the final row.
 | Suncheon Bay  | S2     | +0.203          | +0.312            | +0.040             | +0.273       |
 
 LOO summary: Pearson r = 0.969, RMSE = 0.156 m, MAE = 0.118 m;
-sign-of-bias correct in 15 / 15 held-out points.
+sign-of-bias correct in 14 / 15 held-out points (the single miss is the smallest-magnitude Suncheon L8 point; see Table S1e).
 
 ---
 
@@ -148,9 +148,9 @@ half-range computed from the FES synthesis.
 
 | Variant | β     | 95 % CI       | Intercept (m) | R²    | LOO RMSE (m) | LOO Pearson r | Sign correct |
 |:-------:|:-----:|:-------------:|:-------------:|:-----:|:------------:|:-------------:|:------------:|
-| (a) Baseline KHOA            | 1.78 | [1.44, 1.92] | −0.057 | 0.980 | 0.16 | 0.969 | 15/15 |
-| (b) M₂ amplitude + KHOA      | 1.87 | [1.50, 2.02] | −0.053 | 0.978 | 0.17 | 0.961 | 15/15 |
-| (c) M₂ amplitude + astro. ref. | 1.90 | [1.49, 2.06] | −0.042 | 0.974 | 0.17 | 0.964 | 15/15 |
+| (a) Baseline KHOA            | 1.78 | [1.44, 1.92] | −0.057 | 0.980 | 0.16 | 0.969 | 14/15 |
+| (b) M₂ amplitude + KHOA      | 1.87 | [1.50, 2.02] | −0.053 | 0.978 | 0.17 | 0.961 | 14/15 |
+| (c) M₂ amplitude + astro. ref. | 1.90 | [1.49, 2.06] | −0.042 | 0.974 | 0.17 | 0.964 | 14/15 |
 | (d) FES2022b global model    | 1.70 | [1.42, 1.80] | +0.004 | 0.983 | 0.11 | 0.977 | 15/15 |
 
 ## Table S2b — Per-sensor FES2022b values (variant d)
@@ -176,7 +176,7 @@ half-range computed from the FES synthesis.
 The FES2022b *A* is the mean half-range of the synthesised 5-year
 hourly series at each KHOA gauge coordinate, derived from the eight
 major constituents (M₂, S₂, K₁, O₁, N₂, P₁, K₂, Q₁); the systematic
-under-estimate at Ganghwa-do (FES 1.02 m vs KHOA 2.83 m for the M₂
+under-estimate at Ganghwa-do (FES 1.02 m versus KHOA 2.83 m for the M₂
 component alone) reflects the inability of the 1/30° global grid to
 resolve within-bay tidal amplification; consequently the FES variant
 yields *lower-bound* bias magnitudes where the grid under-resolves the
@@ -194,33 +194,12 @@ main-text §4.8.
 
 ![Stability of the regression coefficients (companion to main-text Figure 5): (top row) slope β by year / season / sensor with ±1 SE error bars; (bottom row) R² by the same partitions. The horizontal red band marks the pooled (*n* = 15) bootstrap 95 % CI of β. All partitions yield β within or near the pooled CI and R² ≥ 0.85, indicating that the regression is robust to year, season, and sensor and is not driven by a single subset of the data; the underlying per-(site × sensor) scatter is shown in Figure S4 and the numerical values in Table S1.](figures/fig6_stability_coefficients.png){width=95%}
 
-![Scatter plots of measured mean bias vs the predictor *A* · ⟨cos θ⟩ partitioned by year (left), meteorological season (middle), or sensor (right), each overlaid with its OLS fit. Companion to Figure S3 (which summarises the slopes and R² as bars).](figures/figS3_stability_panels.png){width=95%}
+![Scatter plots of measured mean bias versus the predictor *A* · ⟨cos θ⟩ partitioned by year (left), meteorological season (middle), or sensor (right), each overlaid with its OLS fit. Companion to Figure S3 (which summarises the slopes and R² as bars).](figures/figS3_stability_panels.png){width=95%}
 
 ![Per-site scatter of tide height versus normalised phase ϕ since the prior HW, with the KHOA-derived mean tide-vs-phase curve (grey band = ±1 σ) and the overall reference mean (dashed line). Satellite acquisitions (coloured by sensor) cluster around phases that, on the western sites, lie below the reference mean (negative bias); at Suncheon Bay they lie above it (positive bias).](figures/figS4_phase_tide_scatter.png){width=92%}
 
-![Elevation-domain DEM error: *z*~sat~(*p*) − *z*~ref~(*p*) as a function of reference elevation *z*~ref~, for each site (panel) and sensor (colour). The Suncheon panel is mirror-symmetric to the western panels, confirming that the tide-domain bipolar bias maps directly into the elevation domain of the waterline DEM. This per-quantile error underlies the per-site truncation and RMSE summaries in main-text Figure 7.](figures/fig8_dem_error_curves.png){width=95%}
+![Elevation-domain DEM error: *z*~sat~(*p*) − *z*~ref~(*p*) as a function of reference elevation *z*~ref~, for each site (panel) and sensor (colour). The Suncheon panel is mirror-symmetric to the western panels, confirming that the tide-domain sign-reversing bias maps directly into the elevation domain of the waterline DEM. This per-quantile error underlies the per-site truncation and RMSE summaries in main-text Figure 7.](figures/fig8_dem_error_curves.png){width=95%}
 
 ![Schematic planar tidal-flat cross-sections per site (vertical exaggerated): brown line is the assumed planar tidal-flat surface; green shading is the elevation band sampled by satellites; red shading is the upper-tide truncation band; blue shading is the lower-tide truncation band. Annotated numbers give the vertical extent (m) and horizontal-equivalent width (m) of each band on the site-specific planar slope. Note the 2.5 km of horizontally missing upper-flat width on Ganghwa-do.](figures/figS6_schematic.png){width=92%}
 
 The four-variant robustness fit of Equation 1 of the main text (variants (a)–(d), including the FES2022b global-model variant) is summarised numerically in Table S2 above; a dedicated figure panel is omitted in this version because the per-variant β values, CIs, and LOO RMSEs are most compactly read from the table.
-
----
-
-# Pointers to public derived-data tables
-
-The following CSV tables underlie the figures and Table S1 entries and
-will be released through the Zenodo-archived GitHub repository
-(`tidalflat`) at the DOI assigned upon acceptance:
-
-| File (under `data/outputs/tables/`)        | Used in                              |
-|:-------------------------------------------|:-------------------------------------|
-| `phase_stability_annual.csv`               | Table S1a, Figure S3 (left), Figure S4 |
-| `phase_stability_seasonal.csv`             | Table S1b, Figure S3 (middle), Figure S4 |
-| `phase_stability_sensor.csv`               | Table S1c, Figure S3 (right), Figure S4 |
-| `phase_stability_bootstrap.csv`            | Table S1d, main-text §4.3            |
-| `phase_stability_loo.csv`                  | Table S1e, main-text Figure 6        |
-| `dem_error_stats.csv`                      | Figure S6, main-text Figure 7 |
-
-Static versions of these CSVs, together with the figure-generation
-scripts in `scripts/demo_*.py`, are version-controlled in the public
-GitHub repository.

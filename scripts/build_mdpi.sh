@@ -82,7 +82,8 @@ echo "Building MDPI Remote Sensing manuscript PDF (LaTeX + citeproc)..."
 case "${target}" in
   draft) build_one draft_mdpi ;;
   cover) build_one cover_letter_mdpi ;;
-  all)   build_one draft_mdpi; build_one cover_letter_mdpi ;;
-  *)     echo "Unknown target: ${target}  (use draft|cover|all)"; exit 1 ;;
+  supp|supplementary) build_one supplementary ;;
+  all)   build_one draft_mdpi; build_one cover_letter_mdpi; build_one supplementary ;;
+  *)     echo "Unknown target: ${target}  (use draft|cover|supp|all)"; exit 1 ;;
 esac
 echo "Done."
